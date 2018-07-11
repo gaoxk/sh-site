@@ -148,6 +148,22 @@ button:hover {
   overflow: hidden;
 }
 
+.contact label{
+  margin-top: 2%;
+}
+
+.newsletter {
+  text-align: center;
+  padding: 10%;
+  border-radius: 7px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+}
+
+.newsletter input {
+  max-width: 80%;
+  display: block;
+  margin : 0 auto;
+}
 
 /* Footer */
 .footer {
