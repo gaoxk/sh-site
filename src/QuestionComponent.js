@@ -23,8 +23,10 @@ class QuestionComponent extends Component {
     render() {
         return (
             <div>
-              <button className="accordion" onClick={this.clicker}>{this.props.question}</button>
-              <div className="panel" style={this.state}>
+              <div className="accordion" onClick={this.clicker}>
+                <p>{this.props.question}</p>
+              </div>
+              <div className="answer animated fadeIn" style={this.state}>
               <p>{this.props.answer}</p>
               </div>
             </div>

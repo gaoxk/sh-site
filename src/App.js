@@ -7,6 +7,8 @@ import HeroComponent from './HeroComponent';
 import DescriptionComponent from './DescriptionComponent';
 import StreamComponent from './StreamComponent';
 import FaqComponent from './FaqComponent';
+import SponsorComponent from './SponsorComponent';
+import ContactComponent from './ContactComponent';
 
 class App extends Component {
   render() {
@@ -36,8 +38,8 @@ class App extends Component {
         <StreamComponent />
         {/* hacker story */}
         <FaqComponent />
-        {/* sponsor */}
-        {/* contact us */}
+        <SponsorComponent />
+        <ContactComponent />
         {/* footer */}
       </div>
     );
