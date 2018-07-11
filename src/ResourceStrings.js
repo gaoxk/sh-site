@@ -33,6 +33,11 @@ const ResourceStrings = {
       'I’m not a student, can I still attend?',
       'What do I need to bring?'
     ],
+    media: [
+      'google.com',
+      'google.com',
+      'google.com'
+    ],
     contact: 'Contact',
     contact_email: 'Email',
     contact_name: 'Name',

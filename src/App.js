@@ -9,6 +9,7 @@ import StreamComponent from './StreamComponent';
 import FaqComponent from './FaqComponent';
 import SponsorComponent from './SponsorComponent';
 import ContactComponent from './ContactComponent';
+import FooterComponent from './FooterComponent';
 
 class App extends Component {
   render() {
@@ -40,7 +41,7 @@ class App extends Component {
         <FaqComponent />
         <SponsorComponent />
         <ContactComponent />
-        {/* footer */}
+        <FooterComponent />
       </div>
     );
   }
