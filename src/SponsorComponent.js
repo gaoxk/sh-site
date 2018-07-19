@@ -3,14 +3,14 @@ import ResourceStrings from './ResourceStrings';
 import streamPhoto from './assets/stream_photo.PNG';
 
 class SponsorComponent extends Component {
-    render() {
-        return (
-            <div className='container stream'>
-                <h1>{ResourceStrings.sponsors}</h1>
-                <img src={streamPhoto}/>
-            </div>
-        );
-    }
+	render() {
+		return (
+			<div className='container stream'>
+				<h1>{this.props.title}</h1>
+				<img src={streamPhoto}/>
+			</div>
+		);
+	}
 }
 
 export default SponsorComponent;

@@ -57,7 +57,7 @@ button:hover {
 }
 
 /* Hero and Description*/
-.hero, .description, .stream {
+.hero, .description, .stream, .hacker-stories {
   height: 100vh;
   position: relative;
   overflow: hidden;
@@ -116,6 +116,43 @@ button:hover {
 
 .stream img {
   width: 100%;
+}
+
+/* Hacker Stories*/
+.carousel-item {
+  margin-top: 2%;
+  padding: 1%;
+  height: 60%;
+  width: 70%;
+  border-radius: 15px;
+  box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2);
+  outline: none;
+  background-color: transparent;
+  display: inline-block;
+  transition: transform 2s ease;
+}
+
+.carousel-bar {
+  margin-top: 2%;
+  padding: 1%;
+  width: 70%;
+  border-radius: 15px;
+  box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2);
+  outline: none;
+  background-color: transparent;
+  display: inline-block;
+}
+
+.carousel-item-img {
+  max-width: 50%;
+  overflow: hidden;
+  float: left;
+}
+
+.carousel-item-text {
+  max-width: 50%;
+  float: right;
+  padding: 3%;
 }
 
 /* FAQ */
