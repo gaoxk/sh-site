@@ -11,9 +11,8 @@ class HackerStoriesComponent extends Component {
 
 	componentDidMount () {
 		setTimeout(() => {
-			console.log('ji_');
 			this.setState({
-				transform: 'translateX(50%)'
+				className: 'carousel-left'
 			});
 		}, 3000);
 		setTimeout(() => {
@@ -25,7 +24,8 @@ class HackerStoriesComponent extends Component {
 		return (
 			<div className='hacker-stories container'>
 				<h1>{ResourceStrings.hacker_stories}</h1>
-				<CarouselItemComponent style={this.state} />
+				<CarouselItemComponent className='carousel-left'/>
+				<CarouselItemComponent {... this.state} />
 				<CarouselBarComponent />
 			</div>
 		);

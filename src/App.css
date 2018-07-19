@@ -119,6 +119,10 @@ button:hover {
 }
 
 /* Hacker Stories*/
+.hacker-stories {
+  overflow: visible;
+}
+
 .carousel-item {
   margin-top: 2%;
   padding: 1%;
@@ -130,6 +134,10 @@ button:hover {
   background-color: transparent;
   display: inline-block;
   transition: transform 2s ease;
+}
+
+.carousel-left {
+  transform: translateX(-110%);
 }
 
 .carousel-bar {
