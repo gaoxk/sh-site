@@ -137,11 +137,12 @@ button:hover {
   transition: transform 2s ease;
   margin-right: 5%;
   white-space: nowrap;
-  
+
 }
 
 .carousel-item-grey {
-  background-color: grey
+  background-color: grey;
+  opacity: 0.5 !important;
 }
 
 .carousel-left {
