@@ -32,22 +32,20 @@ class HackerStoriesComponent extends Component {
 		window.removeEventListener('keydown', this.onKeyDown);
 	}
 
-	onClick (event) {
-		if(window.scrollY > window.innerHeight * 4.5 &&
-			 window.scrollY < window.innerHeight * 5.25 &&
-		   this.state.toggle) {
+	animate (cond1, cond2, event) {
+		if(this.state.toggle) {
 			this.setState((prevState) => {
 				let newTrans = prevState.trans;
 				let newLTR = prevState.ltr;
 				let newRTL = prevState.rlt;
 
-				if(event.screenX < window.innerWidth*0.2 && newTrans > 107) {
+				if(cond1(event) && newTrans > 107) {
 					newLTR = false;
 					newRTL = true;
 					newTrans-=107;
 				}
 
-				if(event.screenX > window.innerWidth*0.6 && newTrans < 108+107) {
+				if(cond2(event) && newTrans < 108+107) {
 					newLTR = true;
 					newRTL = false;
 					newTrans+=107;
@@ -63,33 +61,16 @@ class HackerStoriesComponent extends Component {
 		}
 	}
 
+	onClick (event) {
+		const cond1 = e => e.screenX < window.innerWidth*0.2;
+		const cond2 = e => e.screenX > window.innerWidth*0.6;
+		this.animate(cond1, cond2, event);
+	}
+
 	onKeyDown (event) {
-		if(this.state.toggle && (event.keyCode === 37 || event.keyCode === 39)){
-			this.setState((prevState) => {
-				let newTrans = prevState.trans;
-				let newLTR = prevState.ltr;
-				let newRTL = prevState.rlt;
-
-				if(event.keyCode === 37 && newTrans > 107) {
-					newLTR = false;
-					newRTL = true;
-					newTrans-=107;
-				}
-
-				if(event.keyCode === 39 && newTrans < 108+107) {
-					newLTR = true;
-					newRTL = false;
-					newTrans+=107;
-				}
-
-				return({
-					trans: newTrans,
-					transform: 'translateX(-'+ newTrans + '%)',
-					ltr: newLTR,
-					rtl: newRTL
-				});
-			});
-		}
+		const cond1 = e => e.keyCode === 37;
+		const cond2 = e => e.keyCode === 39;
+		(cond1(event) || cond2(event)) && this.animate(cond1, cond2, event);
 	}
 
 	onScroll (event) {
