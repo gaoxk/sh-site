@@ -33,7 +33,8 @@ class NavComponent extends Component {
 				className: 'animated fadeInDown'
 			});
 			return null;
-		}
+		}	
+
 		if (event.clientY < 100) {
 			this.setState({
 				className: 'animated fadeInDown'

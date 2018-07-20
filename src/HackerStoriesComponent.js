@@ -8,6 +8,7 @@ class HackerStoriesComponent extends Component {
 	constructor (props) {
 		super(props);
 		this.state = {
+			toggle: false,
 			trans: 107,
 			transform: 'translateX(-107%)',
 			ltr: true,
@@ -16,50 +17,25 @@ class HackerStoriesComponent extends Component {
 		};
 		this.onClick = this.onClick.bind(this);
 		this.onScroll = this.onScroll.bind(this);
+		this.onKeyDown = this.onKeyDown.bind(this);
 	}
 
 	componentDidMount () {
 		window.addEventListener('click', this.onClick, { passive: true });
 		window.addEventListener('scroll', this.onScroll, { passive: true });
-		setInterval(() => {
-			this.setState((prevState) => {
-				let newTrans = prevState.trans;
-				let newLTR = prevState.ltr;
-				let newRTL = prevState.rlt;
-
-				if(newTrans > 108+107) {
-					newLTR = false;
-					newRTL = true;
-				}
-
-				if(newTrans < 108) {
-					newLTR = true;
-					newRTL = false;
-				}
-
-				if(newLTR) {
-					newTrans+=107;
-				}else {
-					newTrans-=107;
-				}
-
-				return({
-					trans: newTrans,
-					transform: 'translateX(-'+ newTrans + '%)',
-					ltr: newLTR,
-					rtl: newRTL
-				});
-			});
-		}, 2000000);
+		window.addEventListener('keydown', this.onKeyDown, { passive: true });
 	}
 
 	componentWillUnmount () {
 		window.removeEventListener('click', this.onClick);
 		window.removeEventListener('scroll', this.onScroll);
+		window.removeEventListener('keydown', this.onKeyDown);
 	}
 
 	onClick (event) {
-		if(window.scrollY > window.innerHeight * 4.5 && window.scrollY < window.innerHeight * 5.25){
+		if(window.scrollY > window.innerHeight * 4.5 &&
+			 window.scrollY < window.innerHeight * 5.25 &&
+		   this.state.toggle) {
 			this.setState((prevState) => {
 				let newTrans = prevState.trans;
 				let newLTR = prevState.ltr;
@@ -87,11 +63,40 @@ class HackerStoriesComponent extends Component {
 		}
 	}
 
+	onKeyDown (event) {
+		if(this.state.toggle && (event.keyCode === 37 || event.keyCode === 39)){
+			this.setState((prevState) => {
+				let newTrans = prevState.trans;
+				let newLTR = prevState.ltr;
+				let newRTL = prevState.rlt;
+
+				if(event.keyCode === 37 && newTrans > 107) {
+					newLTR = false;
+					newRTL = true;
+					newTrans-=107;
+				}
+
+				if(event.keyCode === 39 && newTrans < 108+107) {
+					newLTR = true;
+					newRTL = false;
+					newTrans+=107;
+				}
+
+				return({
+					trans: newTrans,
+					transform: 'translateX(-'+ newTrans + '%)',
+					ltr: newLTR,
+					rtl: newRTL
+				});
+			});
+		}
+	}
+
 	onScroll (event) {
 		if(window.scrollY > window.innerHeight * 4.5 && window.scrollY < window.innerHeight * 5.25){
-			this.setState({opacity: 1});
+			this.setState({opacity: 1, toggle: true});
 		} else {
-			this.setState({opacity: 0.5});
+			this.setState({opacity: 0.5, toggle: false});
 		}
 	}
 
