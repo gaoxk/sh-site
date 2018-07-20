@@ -5,7 +5,7 @@ import photo from './assets/square_photo.PNG';
 class CarouselItemComponent extends Component {
 	render() {
 		return (
-			<span className={'carousel-item ' + this.props.className}>
+			<div className={'carousel-item ' + this.props.className}>
 				<span className='carousel-item-img'>
 					<img src={photo} />
 				</span>
@@ -15,7 +15,7 @@ class CarouselItemComponent extends Component {
 							Aenean id sapien eros. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Mauris efficitur nunc ut dapibus lobortis. Vivamus facilisis augue non rutrum venenatis. Duis eleifend dignissim viverra. Vestibulum ut efficitur sem, id gravida purus. Nullam eleifend pellentesque turpis ac rhoncus. Ut tristique orci eget velit auctor porta. Maecenas metus nisi, consectetur id ultrices quis, malesuada quis magna. Pellentesque venenatis vel est vitae viverra. Vestibulum sed finibus urna. Praesent eu sapien vitae felis convallis blandit ac vitae tellus. Donec nec velit in nunc interdum ornare.
 					</p>
 				</span>
-			</span>
+			</div>
 		);
 	}
 }

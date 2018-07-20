@@ -25,7 +25,7 @@ class HackerStoriesComponent extends Component {
 			<div className='hacker-stories container'>
 				<h1>{ResourceStrings.hacker_stories}</h1>
 				<CarouselItemComponent className='carousel-left'/>
-				<CarouselItemComponent {... this.state} />
+				<CarouselItemComponent className='carousel-right'/>
 				<CarouselBarComponent />
 			</div>
 		);

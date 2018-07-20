@@ -121,23 +121,29 @@ button:hover {
 /* Hacker Stories*/
 .hacker-stories {
   overflow: visible;
+  white-space: nowrap;
 }
 
 .carousel-item {
   margin-top: 2%;
   padding: 1%;
   height: 60%;
-  width: 70%;
+  width: 900px;
   border-radius: 15px;
   box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2);
   outline: none;
   background-color: transparent;
   display: inline-block;
   transition: transform 2s ease;
+  margin-right: 5%;
 }
 
 .carousel-left {
-  transform: translateX(-110%);
+  z-index: -1;
+}
+
+.carousel-right {
+  z-index: 1;
 }
 
 .carousel-bar {
@@ -161,6 +167,7 @@ button:hover {
   max-width: 50%;
   float: right;
   padding: 3%;
+  white-space: normal;
 }
 
 /* FAQ */
