@@ -20,19 +20,19 @@ class HackerStoriesComponent extends Component {
 			this.setState((prevState) => {
 				let newTrans = prevState.trans;
 				let newLTR = prevState.ltr;
-				let newRLT = prevState.rlt;
+				let newRTL = prevState.rlt;
 
-				if(newTrans > 213) {
+				if(newTrans > 108+107	) {
 					newLTR = false;
-					newRLT = true;
+					newRTL = true;
 				}
 
-				if(newTrans < 108+107) {
+				if(newTrans < 108) {
 					newLTR = true;
-					newRLT = false;
+					newRTL = false;
 				}
 
-				if(prevState.ltr) {
+				if(newLTR) {
 					newTrans+=107;
 				}else {
 					newTrans-=107;
@@ -44,7 +44,7 @@ class HackerStoriesComponent extends Component {
 					trans: newTrans,
 					transform: 'translateX(-'+ newTrans + '%)',
 					ltr: newLTR,
-					rtl: newRLT
+					rtl: newRTL
 				});
 			});
 		}, 2500);
