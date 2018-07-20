@@ -128,7 +128,7 @@ button:hover {
   margin-top: 2%;
   padding: 1%;
   height: 60%;
-  width: 900px;
+  width: 70%;
   border-radius: 15px;
   box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2);
   outline: none;
@@ -136,10 +136,16 @@ button:hover {
   display: inline-block;
   transition: transform 2s ease;
   margin-right: 5%;
+  white-space: nowrap;
+  
+}
+
+.carousel-item-grey {
+  background-color: grey
 }
 
 .carousel-left {
-  z-index: -1;
+
 }
 
 .carousel-right {
