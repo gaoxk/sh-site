@@ -32,6 +32,27 @@ class HackerStoriesComponent extends Component {
 		window.removeEventListener('keydown', this.onKeyDown);
 	}
 
+	onClick (event) {
+		const cond1 = e => e.screenX < window.innerWidth*0.2;
+		const cond2 = e => e.screenX > window.innerWidth*0.6;
+		this.animate(cond1, cond2, event);
+	}
+
+	onKeyDown (event) {
+		const cond1 = e => e.keyCode === 37;
+		const cond2 = e => e.keyCode === 39;
+		(cond1(event) || cond2(event)) && this.animate(cond1, cond2, event);
+	}
+
+	onScroll (event) {
+		if(window.scrollY > window.innerHeight * 4.5 &&
+			window.scrollY < window.innerHeight * 5.25) {
+			this.setState({opacity: 1, toggle: true});
+		} else {
+			this.setState({opacity: 0.5, toggle: false});
+		}
+	}
+
 	animate (cond1, cond2, event) {
 		if(this.state.toggle) {
 			this.setState((prevState) => {
@@ -58,26 +79,6 @@ class HackerStoriesComponent extends Component {
 					rtl: newRTL
 				});
 			});
-		}
-	}
-
-	onClick (event) {
-		const cond1 = e => e.screenX < window.innerWidth*0.2;
-		const cond2 = e => e.screenX > window.innerWidth*0.6;
-		this.animate(cond1, cond2, event);
-	}
-
-	onKeyDown (event) {
-		const cond1 = e => e.keyCode === 37;
-		const cond2 = e => e.keyCode === 39;
-		(cond1(event) || cond2(event)) && this.animate(cond1, cond2, event);
-	}
-
-	onScroll (event) {
-		if(window.scrollY > window.innerHeight * 4.5 && window.scrollY < window.innerHeight * 5.25){
-			this.setState({opacity: 1, toggle: true});
-		} else {
-			this.setState({opacity: 0.5, toggle: false});
 		}
 	}
 
