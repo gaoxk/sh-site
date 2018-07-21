@@ -13,7 +13,15 @@ class HackerStoriesComponent extends Component {
 			transform: 'translateX(-107%)',
 			ltr: true,
 			rtl: false,
-			opacity: 0.5
+			opacity: 0.5,
+			timer: setInterval(
+				() => {this.animate(() => true, () => true, true);},
+				3000)
+			/*			arr: [
+				<CarouselItemComponent title='11111'/>,
+				<CarouselItemComponent title='22222'/>,
+				<CarouselItemComponent title='33333'/>
+			] */
 		};
 		this.onClick = this.onClick.bind(this);
 		this.onScroll = this.onScroll.bind(this);
@@ -24,6 +32,23 @@ class HackerStoriesComponent extends Component {
 		window.addEventListener('click', this.onClick, { passive: true });
 		window.addEventListener('scroll', this.onScroll, { passive: true });
 		window.addEventListener('keydown', this.onKeyDown, { passive: true });
+
+	/*	setInterval(
+			() => {
+				console.log('gemgdg');
+				this.setState(prevState => {
+					const hm1 = prevState.arr[0];
+					const hm2 = prevState.arr[1];
+					const hm3 = prevState.arr[2];
+					return {
+						arr: [
+							hm2,
+							hm1,
+							hm3
+						]
+					};
+				});
+			}, 3000); */
 	}
 
 	componentWillUnmount () {
@@ -33,15 +58,27 @@ class HackerStoriesComponent extends Component {
 	}
 
 	onClick (event) {
+		clearInterval(this.state.timer);
 		const cond1 = e => e.screenX < window.innerWidth*0.2;
 		const cond2 = e => e.screenX > window.innerWidth*0.6;
 		this.animate(cond1, cond2, event);
+	/*	this.setState({
+			timmer: setInterval(
+				() => {this.animate(() => true, () => true, true);},
+				3000)
+		}); */
 	}
 
 	onKeyDown (event) {
-		const cond1 = e => e.keyCode === 37;
-		const cond2 = e => e.keyCode === 39;
+		clearInterval(this.state.timer);
+		const cond1 = e => e.keyCode === 37; //left
+		const cond2 = e => e.keyCode === 39; //right
 		(cond1(event) || cond2(event)) && this.animate(cond1, cond2, event);
+	/*	this.setState({
+			timmer: setInterval(
+				() => {this.animate(() => true, () => true, true);},
+				3000)
+		}); */
 	}
 
 	onScroll (event) {
@@ -53,24 +90,26 @@ class HackerStoriesComponent extends Component {
 		}
 	}
 
-	animate (cond1, cond2, event) {
+	animate (cond1, cond2, event, auto) {
 		if(this.state.toggle) {
 			this.setState((prevState) => {
 				let newTrans = prevState.trans;
 				let newLTR = prevState.ltr;
 				let newRTL = prevState.rlt;
 
-				if(cond1(event) && newTrans > 107) {
+				if(cond1(event) && newTrans > 107) { //
+					console.log('first');
 					newLTR = false;
 					newRTL = true;
 					newTrans-=107;
-				}
-
-				if(cond2(event) && newTrans < 108+107) {
+				} else if(cond2(event) && newTrans < 107*3) {
+					console.log('second');
 					newLTR = true;
 					newRTL = false;
 					newTrans+=107;
 				}
+
+				console.log(this.state);
 
 				return({
 					trans: newTrans,
@@ -86,10 +125,11 @@ class HackerStoriesComponent extends Component {
 		return (
 			<div className='hacker-stories container'>
 				<h1>{ResourceStrings.hacker_stories}</h1>
+				{/*	{this.state.arr}*/}
 				<CarouselItemlGreyComponent style={this.state} />
 				<CarouselItemComponent style={this.state} title='11111'/>
-				<CarouselItemComponent className='carousel-right'style={this.state} title='22222'/>
-				<CarouselItemComponent className='carousel-left' style={this.state} title='33333'/>
+				<CarouselItemComponent style={this.state} title='22222'/>
+				<CarouselItemComponent style={this.state} title='33333'/>
 				<CarouselItemlGreyComponent style={this.state} />
 				<CarouselBarComponent />
 			</div>
