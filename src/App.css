@@ -58,7 +58,7 @@ button:hover {
 }
 
 /* Hero and Description*/
-.hero, .description, .stream, .hacker-stories, .sponsor {
+.hero, .description, .stream, .hacker-stories, .sponsor, .how-it-works {
   height: 100vh;
   position: relative;
   overflow: hidden;
@@ -98,6 +98,22 @@ button:hover {
 .hero button:hover {
   background-color: white;
   color: #3c56a5;
+}
+
+/* How It Works */
+.how-it-works {
+  background-color: green;
+}
+
+.how-it-works img {
+  position: absolute;
+  width: 50%;
+  left: 50%;
+  top: 5%;;
+}
+
+.how-it-works-text {
+  margin-top: 25%;
 }
 
 /* Stream */
