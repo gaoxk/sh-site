@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import ResourceStrings from './ResourceStrings';
 import streamPhoto from './assets/stream_photo.PNG';
 
-class SponsorComponent extends Component {
+class Sponsor extends Component {
 	render() {
 		return (
 			<div className='container stream'>
@@ -13,4 +13,4 @@ class SponsorComponent extends Component {
 	}
 }
 
-export default SponsorComponent;
+export default Sponsor;

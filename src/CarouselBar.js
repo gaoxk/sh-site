@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import ResourceStrings from './ResourceStrings';
 
-class CarouselBarComponent extends Component {
+class CarouselBar extends Component {
 	render() {
 		return (
 			<div className='carousel-bar'>
@@ -10,4 +10,4 @@ class CarouselBarComponent extends Component {
 	}
 }
 
-export default CarouselBarComponent;
+export default CarouselBar;

@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import ResourceStrings from './ResourceStrings';
 import photo from './assets/square_photo.PNG';
 
-class CarouselItemComponent extends Component {
+class CarouselItem extends Component {
 	render() {
 		return (
 			<div className={'carousel-item ' + this.props.className} style={this.props.style}>
@@ -20,4 +20,4 @@ class CarouselItemComponent extends Component {
 	}
 }
 
-export default CarouselItemComponent;
+export default CarouselItem;

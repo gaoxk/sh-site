@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import ResourceStrings from './ResourceStrings';
 import streamPhoto from './assets/stream_photo.PNG';
 
-class StreamComponent extends Component {
+class Stream extends Component {
 	render() {
 		return (
 			<div className='container stream'>
@@ -33,4 +33,4 @@ class StreamComponent extends Component {
 	}
 }
 
-export default StreamComponent;
+export default Stream;

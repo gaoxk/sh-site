@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import {FormGroup, FormControl, ControlLabel} from 'react-bootstrap';
 import ResourceStrings from './ResourceStrings';
 
-class ContactComponent extends Component {
+class Contact extends Component {
 	constructor(props) {
 		super(props);
 		this.state = {
@@ -81,4 +81,4 @@ class ContactComponent extends Component {
 	}
 }
 
-export default ContactComponent;
+export default Contact;

@@ -1,14 +1,14 @@
 import React, { Component } from 'react';
 import ResourceStrings from './ResourceStrings';
-import QuestionComponent from './QuestionComponent';
+import Question from './Question';
 
-class FaqComponent extends Component {
+class Faq extends Component {
 	render() {
 		let qanda = [];
 		const len = ResourceStrings.questions.length;
 		for(let i = 0; i<len; i++) {
 			qanda.push(
-				<QuestionComponent
+				<Question
 					question={ResourceStrings.questions[i]}
 					answer={ResourceStrings.answers[i]}
 				/>
@@ -29,4 +29,4 @@ class FaqComponent extends Component {
 	}
 }
 
-export default FaqComponent;
+export default Faq;

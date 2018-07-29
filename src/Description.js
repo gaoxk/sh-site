@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import ResourceStrings from './ResourceStrings';
 
-class DescriptionComponent extends Component {
+class Description extends Component {
 	render() {
 		return (
 			<div className='container description'>
@@ -16,4 +16,4 @@ class DescriptionComponent extends Component {
 	}
 }
 
-export default DescriptionComponent;
+export default Description;

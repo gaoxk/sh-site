@@ -1,53 +1,53 @@
-import React, { Component } from 'react';
+import React, {  } from 'react';
 import logo from './logo.svg';
 import './App.css';
 import ResourceStrings from './ResourceStrings';
 import NavComponent from './NavComponent';
-import HeroComponent from './HeroComponent';
-import DescriptionComponent from './DescriptionComponent';
-import StreamComponent from './StreamComponent';
-import FaqComponent from './FaqComponent';
-import SponsorComponent from './SponsorComponent';
-import ContactComponent from './ContactComponent';
-import FooterComponent from './FooterComponent';
-import HackerStoriesComponent from './HackerStoriesComponent';
+import Hero from './Hero';
+import Description from './Description';
+import Stream from './Stream';
+import Faq from './Faq';
+import Sponsor from './Sponsor';
+import Contact from './Contact';
+import Footer from './Footer';
+import HackerStories from './HackerStories';
 
-class App extends Component {
+class App extends  {
 	render() {
 		return (
 			<div className="App">
 				<NavComponent />
-				<HeroComponent />
-				<DescriptionComponent
+				<Hero />
+				<Description
 					title={ResourceStrings.description_gain}
 					sub1={ResourceStrings.description_gain_1}
 					sub2={ResourceStrings.description_gain_2}
 					sub3={ResourceStrings.description_gain_3}
 				/>
 				{/*temporary */}
-				<DescriptionComponent
+				<Description
 					title={ResourceStrings.how_it_works}
 					sub1={ResourceStrings.description_gain_1}
 					sub2={ResourceStrings.description_gain_2}
 					sub3={ResourceStrings.description_gain_3}
 				/>
-				<DescriptionComponent
+				<Description
 					title={ResourceStrings.description_learn}
 					sub1={ResourceStrings.description_learn_1}
 					sub2={ResourceStrings.description_learn_2}
 					sub3={ResourceStrings.description_learn_3}
 				/>
-				<StreamComponent />
-				<HackerStoriesComponent />
-				<FaqComponent />
-				<SponsorComponent
+				<Stream />
+				<HackerStories />
+				<Faq />
+				<Sponsor
 					title={ResourceStrings.sponsors}
 				/>
-				<SponsorComponent
+				<Sponsor
 					title={ResourceStrings.partners}
 				/>
-				<ContactComponent />
-				<FooterComponent />
+				<Contact />
+				<Footer />
 			</div>
 		);
 	}

@@ -3,7 +3,7 @@ import {Nav, Navbar, NavItem} from 'react-bootstrap';
 import ResourceStrings from './ResourceStrings';
 import logo from './assets/logo.png';
 
-class QuestionComponent extends Component {
+class Question extends Component {
 	constructor(props) {
 		super(props);
 		this.state = {
@@ -34,4 +34,4 @@ class QuestionComponent extends Component {
 	}
 }
 
-export default QuestionComponent;
+export default Question;

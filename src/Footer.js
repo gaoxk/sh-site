@@ -6,7 +6,7 @@ import tw from './assets/twitter.svg';
 import ig from './assets/instagram.svg';
 import fb from './assets/facebook.svg';
 
-class FooterComponent extends Component {
+class Footer extends Component {
 	render() {
 		let icons = [];
 		const svgs = [tw, ig, fb];
@@ -28,4 +28,4 @@ class FooterComponent extends Component {
 	}
 }
 
-export default FooterComponent;
+export default Footer;

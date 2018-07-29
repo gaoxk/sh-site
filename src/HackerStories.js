@@ -1,10 +1,10 @@
 import React, { Component } from 'react';
 import ResourceStrings from './ResourceStrings';
-import CarouselItemComponent from './CarouselItemComponent';
-import CarouselItemlGreyComponent from './CarouselItemGreyComponent';
-import CarouselBarComponent from './CarouselBarComponent';
+import CarouselItem from './CarouselItem';
+import CarouselItemlGrey from './CarouselItemGrey';
+import CarouselBar from './CarouselBar';
 
-class HackerStoriesComponent extends Component {
+class HackerStories extends Component {
 	constructor (props) {
 		super(props);
 		this.state = {
@@ -14,9 +14,9 @@ class HackerStoriesComponent extends Component {
 			ltr: true,
 			rtl: false,
 			opacity: 0.5,
-			timer: setInterval(
+		/* timer: setInterval(
 				() => {this.animate(() => true, () => true, true);},
-				3000)
+				3000) */
 			/*			arr: [
 				<CarouselItemComponent title='11111'/>,
 				<CarouselItemComponent title='22222'/>,
@@ -96,14 +96,11 @@ class HackerStoriesComponent extends Component {
 				let newTrans = prevState.trans;
 				let newLTR = prevState.ltr;
 				let newRTL = prevState.rlt;
-
-				if(cond1(event) && newTrans > 107) { //
-					console.log('first');
+			  if (cond1(event) && newTrans > 107) {
 					newLTR = false;
 					newRTL = true;
 					newTrans-=107;
-				} else if(cond2(event) && newTrans < 107*3) {
-					console.log('second');
+				} else if (cond2(event) && newTrans < 107*3) {
 					newLTR = true;
 					newRTL = false;
 					newTrans+=107;
@@ -126,15 +123,15 @@ class HackerStoriesComponent extends Component {
 			<div className='hacker-stories container'>
 				<h1>{ResourceStrings.hacker_stories}</h1>
 				{/*	{this.state.arr}*/}
-				<CarouselItemlGreyComponent style={this.state} />
-				<CarouselItemComponent style={this.state} title='11111'/>
-				<CarouselItemComponent style={this.state} title='22222'/>
-				<CarouselItemComponent style={this.state} title='33333'/>
-				<CarouselItemlGreyComponent style={this.state} />
-				<CarouselBarComponent />
+				<CarouselItemlGrey style={this.state} />
+				<CarouselItem style={this.state} title='11111'/>
+				<CarouselItem style={this.state} title='22222'/>
+				<CarouselItem style={this.state} title='33333'/>
+				<CarouselItemlGrey style={this.state} />
+				<CarouselBar/>
 			</div>
 		);
 	}
 }
 
-export default HackerStoriesComponent;
+export default HackerStories;

@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import ResourceStrings from './ResourceStrings';
 
-class HeroComponent extends Component {
+class Hero extends Component {
 	render() {
 		return (
 			<div className='container hero'>
@@ -20,4 +20,4 @@ class HeroComponent extends Component {
 	}
 }
 
-export default HeroComponent;
+export default Hero;
