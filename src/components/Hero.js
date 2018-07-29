@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import ResourceStrings from './ResourceStrings';
+import ResourceStrings from './../ResourceStrings';
 
 class Hero extends Component {
 	render() {

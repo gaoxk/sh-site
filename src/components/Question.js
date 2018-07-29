@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import {Nav, Navbar, NavItem} from 'react-bootstrap';
-import ResourceStrings from './ResourceStrings';
-import logo from './assets/logo.png';
+import ResourceStrings from './../ResourceStrings';
+import logo from './../assets/logo.png';
 
 class Question extends Component {
 	constructor(props) {

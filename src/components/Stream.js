@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
-import ResourceStrings from './ResourceStrings';
-import streamPhoto from './assets/stream_photo.PNG';
+import ResourceStrings from './../ResourceStrings';
+import streamPhoto from './../assets/stream_photo.PNG';
 
 class Stream extends Component {
 	render() {

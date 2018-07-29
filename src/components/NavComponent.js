@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import {Nav, Navbar, NavItem} from 'react-bootstrap';
-import ResourceStrings from './ResourceStrings';
-import logo from './assets/logo.png';
+import ResourceStrings from './../ResourceStrings';
+import logo from './../assets/logo.png';
 
 class NavComponent extends Component {
 	constructor (props) {
@@ -33,7 +33,7 @@ class NavComponent extends Component {
 				className: 'animated fadeInDown'
 			});
 			return null;
-		}	
+		}
 
 		if (event.clientY < 100) {
 			this.setState({

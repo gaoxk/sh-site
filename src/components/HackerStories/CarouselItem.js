@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
-import ResourceStrings from './ResourceStrings';
-import photo from './assets/square_photo.PNG';
+import ResourceStrings from './../../ResourceStrings';
+import photo from './../../assets/square_photo.PNG';
 
 class CarouselItem extends Component {
 	render() {

@@ -1,18 +1,18 @@
-import React, {  } from 'react';
+import React, { Component } from 'react';
 import logo from './logo.svg';
 import './App.css';
 import ResourceStrings from './ResourceStrings';
-import NavComponent from './NavComponent';
-import Hero from './Hero';
-import Description from './Description';
-import Stream from './Stream';
-import Faq from './Faq';
-import Sponsor from './Sponsor';
-import Contact from './Contact';
-import Footer from './Footer';
-import HackerStories from './HackerStories';
+import NavComponent from './components/NavComponent';
+import Hero from './components/Hero';
+import Description from './components/Description';
+import Stream from './components/Stream';
+import Faq from './components/Faq';
+import Sponsor from './components/Sponsor';
+import Contact from './components/Contact';
+import Footer from './components/Footer';
+import HackerStories from './components/HackerStories/HackerStories';
 
-class App extends  {
+class App extends Component {
 	render() {
 		return (
 			<div className="App">
