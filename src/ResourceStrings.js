@@ -1,4 +1,7 @@
 const ResourceStrings = {
+	blue: '#3c56a5',
+	red: '#ec1b69',
+	green: '#80c241',
 	about: 'About',
 	apply_now: 'Apply Now',
 	description_gain: 'What you can gain from a hackathon',
@@ -50,6 +53,7 @@ const ResourceStrings = {
 	news_sub: 'Subscribe Now',
 	send: 'Send',
 	sign_up: 'Sign Up',
+	subscribe: 'Subscribe',
 	sponsors: 'Sponsors',
 	partners: 'Partners',
 	starterhacks: 'StarterHacks 2019',

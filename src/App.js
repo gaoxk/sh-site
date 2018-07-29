@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
 import './App.css';
 import ResourceStrings from './ResourceStrings';
 import NavComponent from './components/NavComponent';
@@ -42,9 +41,6 @@ class App extends Component {
 				<Faq />
 				<Sponsor
 					title={ResourceStrings.sponsors}
-				/>
-				<Sponsor
-					title={ResourceStrings.partners}
 				/>
 				<Contact />
 				<Footer />

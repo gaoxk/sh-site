@@ -1,3 +1,9 @@
+/*
+  #3c56a5 blue
+  #ec1b69 red
+  #80c241 green
+*/
+
 body, html {
   min-height: 100%;
   max-width: 100%;
@@ -48,16 +54,11 @@ button:hover {
 }
 
 .navbar-brand {
-  padding-top: 0;
-}
-
-.navbar-brand img {
-  height: 2.75em;
-  max-height: 100%;
+   padding-top: 0.5em;
 }
 
 /* Hero and Description*/
-.hero, .description, .stream, .hacker-stories {
+.hero, .description, .stream, .hacker-stories, .sponsor {
   height: 100vh;
   position: relative;
   overflow: hidden;
@@ -88,14 +89,15 @@ button:hover {
 }
 
 .hero button {
-  border: 1px solid #5e507e;
+  border: 1px solid #3c56a5;
+  background-color: #3c56a5;
   border-radius: 100px;
-  color: #5e507e;
+  color: white;
 }
 
 .hero button:hover {
-  background-color: #5e507e;
-  color: white;
+  background-color: white;
+  color: #3c56a5;
 }
 
 /* Stream */
@@ -103,15 +105,8 @@ button:hover {
   text-align: center;
 }
 
-.stream button {
-  border: 1px solid #5e507e;
-  border-radius: 100px;
-  color: #5e507e;
-}
-
-.stream button:hover {
-  background-color: #5e507e;
-  color: white;
+.stream h3, .stream p {
+  margin-top: 10%;
 }
 
 .stream img {
@@ -198,6 +193,17 @@ button:hover {
   margin-top: 2%;
   padding: 0 5%;
   transition: display 1s;
+}
+
+.faq img {
+  position: absolute;
+  width: 30%;
+  margin-top: 5%;
+}
+
+/* Sponsor */
+.sponsor {
+  text-align: center;
 }
 
 /* Contact */

@@ -10,24 +10,25 @@ class Stream extends Component {
 				<img src={streamPhoto}/>
 				<div className='row'>
 					<div className='col-md-4'>
-						<h3>{ResourceStrings.stream_design}</h3>
+						<h3 style={{color: ResourceStrings.green}}>
+							{ResourceStrings.stream_design}
+						</h3>
 						<p>{ResourceStrings.stream_design_desc}</p>
 					</div>
 					<div className='col-md-4'>
-						<h3>{ResourceStrings.stream_dev}</h3>
+						<h3 style={{color: ResourceStrings.red}}>
+							{ResourceStrings.stream_dev}
+						</h3>
 						<p>{ResourceStrings.stream_dev_desc}</p>
 					</div>
 					<div className='col-md-4'>
-						<h3>{ResourceStrings.stream_bussiness}</h3>
+						<h3 style={{color: ResourceStrings.blue}}>
+							{ResourceStrings.stream_bussiness}
+						</h3>
 						<p>{ResourceStrings.stream_bussiness_desc}</p>
 					</div>
 				</div>
 				<h2>{ResourceStrings.stream_follow}</h2>
-				<a href='#contact'>
-					<button type='button' className='center-block'>
-						<h4>{ResourceStrings.apply_now.toUpperCase()}</h4>
-					</button>
-				</a>
 			</div>
 		);
 	}

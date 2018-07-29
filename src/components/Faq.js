@@ -2,6 +2,8 @@ import React, { Component } from 'react';
 import ResourceStrings from './../ResourceStrings';
 import Question from './Question';
 
+import faq_img from './../assets/FAQ.png';
+
 class Faq extends Component {
 	render() {
 		let qanda = [];
@@ -15,13 +17,16 @@ class Faq extends Component {
 			);
 		}
 		return (
-			<div className='container hero'>
-				<div className='row'>
-					<div className='col-md-4'>
-						<h2>{ResourceStrings.faq_long}</h2>
-					</div>
-					<div className='col-md-8'>
-						{qanda}
+			<div className='faq' id='faq'>
+				<img src={faq_img} />
+				<div className='container hero'>
+					<div className='row'>
+						<div className='col-md-4'>
+							<h2>{ResourceStrings.faq_long}</h2>
+						</div>
+						<div className='col-md-8'>
+							{qanda}
+						</div>
 					</div>
 				</div>
 			</div>

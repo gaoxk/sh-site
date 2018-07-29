@@ -24,7 +24,7 @@ class NavComponent extends Component {
 
 	animate (event) {
 		const scrollPos = window.scrollY;
-		if (scrollPos > window.innerHeight * 0.75) {
+		if (scrollPos > window.innerHeight * 0.25) {
 			this.setState({
 				className: 'animated fadeOutUp'
 			});
@@ -51,7 +51,7 @@ class NavComponent extends Component {
 			<Navbar fixedTop {... this.state}>
 				<Navbar.Header>
 					<Navbar.Brand>
-	          	Logo
+	          	<img src={logo} />
 					</Navbar.Brand>
       	</Navbar.Header>
       	<Nav pullRight>
@@ -69,9 +69,6 @@ class NavComponent extends Component {
 					</NavItem>
 					<NavItem eventKey={5} href='#contact'>
 						<p>{ResourceStrings.contact}</p>
-					</NavItem>
-					<NavItem eventKey={6} href='google.com'>
-						<p>{ResourceStrings.apply_now}</p>
 					</NavItem>
     		</Nav>
 	  	</Navbar>
