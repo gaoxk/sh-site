@@ -109,11 +109,19 @@ button:hover {
   position: absolute;
   width: 50%;
   left: 50%;
-  top: 5%;;
+  top: 5%;
+}
+
+.how-it-works .nope {
+  visibility: hidden;
 }
 
 .how-it-works-text {
   margin-top: 25%;
+}
+
+.how-it-works .col-md-2 {
+  text-align: center;
 }
 
 /* Stream */

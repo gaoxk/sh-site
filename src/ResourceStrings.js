@@ -14,6 +14,10 @@ const ResourceStrings = {
 	description_learn_3: 'We have selected a group of motivated mentors who will guide you to success, cheer you on and share their knowledge with you.',
 	hacker_stories: 'Hacker Stories',
 	how_it_works: 'How it works',
+	how_in_24: 'In 24 hours:',
+	how_plan: 'Plan',
+	how_proto: 'Prototype',
+	how_present: 'Present',
 	faq: 'faq',
 	faq_long: 'Frequently Asked Questions',
 	answers: [
