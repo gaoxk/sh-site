@@ -19,7 +19,7 @@ class HowItWorks extends Component {
 	}
 
 	handleClick(num) {
-		console.log('heh');
+		console.log(num);
 		let i;
 		let arr = ['' , '', ''];
 		for(i=0; i<3; i++) {
@@ -29,6 +29,14 @@ class HowItWorks extends Component {
 	}
 
 	render() {
+		const assets = [plan, proto, present];
+		let imgs = [];
+		let i;
+		for(i=0; i<3; i++){
+			imgs.push(
+				<img src={assets[i]} className={this.state.visible[i]}/>
+			);
+		}
 		return (
 			<div className='how-it-works'>
 				<div className='container' id='how'>
@@ -40,17 +48,15 @@ class HowItWorks extends Component {
 								<h3>{ResourceStrings.how_plan}</h3>
 							</div>
 							<div className='col-md-2' onClick={() => this.handleClick(1)}>
-								<h3>{ResourceStrings.how_proto}</h3>
-							</div>
+      					<h3>{ResourceStrings.how_proto}</h3>
+      				</div>
 							<div className='col-md-2' onClick={() => this.handleClick(2)}>
-								<h3>{ResourceStrings.how_present}</h3>
-							</div>
+      					<h3>{ResourceStrings.how_present}</h3>
+      				</div>
 						</div>
 					</div>
 				</div>
-				<img src={plan} className={this.state.visible[0]}/>
-				<img src={proto} className={this.state.visible[1]}/>
-				<img src={present} className={this.state.visible[2]}/>
+				{imgs}
 			</div>
 		);
 	}
