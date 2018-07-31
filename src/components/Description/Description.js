@@ -4,7 +4,7 @@ import ResourceStrings from './../../ResourceStrings';
 class Description extends Component {
 	render() {
 		return (
-			<div className='description'>
+			<div className='description' id={this.props.id}>
 				<img src={this.props.imger}/>
 				<div className='container'>
 					<div className='description-text'>

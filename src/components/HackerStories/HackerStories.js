@@ -106,8 +106,6 @@ class HackerStories extends Component {
 					newTrans+=107;
 				}
 
-				console.log(this.state);
-
 				return({
 					trans: newTrans,
 					transform: 'translateX(-'+ newTrans + '%)',
@@ -120,7 +118,7 @@ class HackerStories extends Component {
 
 	render() {
 		return (
-			<div className='hacker-stories container'>
+			<div className='hacker-stories container' id='hacker-stories'>
 				<h1>{ResourceStrings.hacker_stories}</h1>
 				{/*	{this.state.arr}*/}
 				<CarouselItemlGrey style={this.state} />

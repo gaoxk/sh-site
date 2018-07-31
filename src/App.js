@@ -26,6 +26,7 @@ class App extends Component {
 					title={ResourceStrings.description_gain}
 					bod={Gain()}
 					imger={gain}
+					id='about'
 				/>
 				<HowItWorks/>
 				<Description

@@ -70,13 +70,13 @@ class NavComponent extends Component {
 					</Navbar.Brand>
       	</Navbar.Header>
       	<Nav pullRight>
-					<NavItem eventKey={1} href='#proj1'>
+					<NavItem eventKey={1} href='#about'>
 						<p>{ResourceStrings.about}</p>
 					</NavItem>
 					<NavItem eventKey={2} href='#hacker-stories'>
 						<p>{ResourceStrings.hacker_stories}</p>
 					</NavItem>
-					<NavItem eventKey={3} href='#sponsors'>
+					<NavItem eventKey={3} href='#sponsor'>
 						<p>{ResourceStrings.sponsors}</p>
 					</NavItem>
 					<NavItem eventKey={4} href='#faq'>
