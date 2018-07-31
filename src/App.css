@@ -69,8 +69,26 @@ button:hover {
   margin-top: 25%;
 }
 
+.hero img {
+  position: absolute;
+  height: 99%;
+  width: 50%;
+  right: 0;
+}
+
+.description {
+  overflow: visible;
+}
+
 .description-text {
   transform: translateX(100%);
+}
+
+.description img {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 45%;
 }
 
 @media (max-width: 1025px) {

@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import './App.css';
 import ResourceStrings from './ResourceStrings';
+
 import NavComponent from './components/NavComponent';
 import Hero from './components/Hero';
 import Description from './components/Description';
@@ -11,6 +12,8 @@ import Sponsor from './components/Sponsor';
 import Contact from './components/Contact';
 import Footer from './components/Footer';
 import HackerStories from './components/HackerStories/HackerStories';
+
+import gain from './assets/Gain.png';
 
 class App extends Component {
 	render() {
@@ -23,6 +26,7 @@ class App extends Component {
 					sub1={ResourceStrings.description_gain_1}
 					sub2={ResourceStrings.description_gain_2}
 					sub3={ResourceStrings.description_gain_3}
+					imger={gain}
 				/>
 				<HowItWorks/>
 				<Description
