@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import ResourceStrings from './../ResourceStrings';
+import ResourceStrings from './../../ResourceStrings';
 
 class Description extends Component {
 	render() {
@@ -9,9 +9,7 @@ class Description extends Component {
 				<div className='container'>
 					<div className='description-text'>
 						<h1>{this.props.title}</h1>
-						<p>{this.props.sub1}</p>
-						<p>{this.props.sub2}</p>
-						<p>{this.props.sub3}</p>
+						{this.props.bod}
 					</div>
 				</div>
 			</div>

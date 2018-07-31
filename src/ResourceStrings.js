@@ -5,13 +5,26 @@ const ResourceStrings = {
 	about: 'About',
 	apply_now: 'Apply Now',
 	description_gain: 'What you can gain from a hackathon',
-	description_gain_1: 'You\'ll have <strong>access to the tools, workshops and high-tech hardware</strong> to help your ideas come to life.',
-	description_gain_2: 'You’ll get to work with large corporations, experienced mentors and other talented people.',
-	description_gain_3: '<strong>In just 24 hours</strong>, your concept becomes a solution that can change tomorrow.',
+	description_gain_arr: [
+		[
+			'You\'ll have ',
+			'access to the tools, workshops and high-tech hardware ',
+			'to help your ideas come to life.',
+		],
+		[
+			'You’ll get to work with large corporations, experienced mentors and other talented people.',
+		],
+		[
+			'In just 24 hours, ',
+			'your concept becomes a solution that can change tomorrow.'
+		]
+	],
 	description_learn: 'How do we facilitate learning?',
-	description_learn_1: 'We host a set of workshops that will teach you the specific techniques you can use throughout the weekend to excel in your stream.',
-	description_learn_2: 'It doesn’t end there!',
-	description_learn_3: 'We have selected a group of motivated mentors who will guide you to success, cheer you on and share their knowledge with you.',
+	description_learn_arr: [
+		'We host a set of workshops that will teach you the specific techniques you can use throughout the weekend to excel in your stream.',
+		'It doesn’t end there!',
+		'We have selected a group of motivated mentors who will guide you to success, cheer you on and share their knowledge with you.'
+	],
 	hacker_stories: 'Hacker Stories',
 	how_it_works: 'How it works',
 	how_in_24: 'In 24 hours:',

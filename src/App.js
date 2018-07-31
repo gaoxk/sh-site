@@ -4,7 +4,8 @@ import ResourceStrings from './ResourceStrings';
 
 import NavComponent from './components/NavComponent';
 import Hero from './components/Hero';
-import Description from './components/Description';
+import Description from './components/Description/Description';
+import { Gain, Learn} from './components/Description/Descriptions';
 import HowItWorks from './components/HowItWorks';
 import Stream from './components/Stream';
 import Faq from './components/Faq';
@@ -23,17 +24,13 @@ class App extends Component {
 				<Hero/>
 				<Description
 					title={ResourceStrings.description_gain}
-					sub1={ResourceStrings.description_gain_1}
-					sub2={ResourceStrings.description_gain_2}
-					sub3={ResourceStrings.description_gain_3}
+					bod={Gain()}
 					imger={gain}
 				/>
 				<HowItWorks/>
 				<Description
 					title={ResourceStrings.description_learn}
-					sub1={ResourceStrings.description_learn_1}
-					sub2={ResourceStrings.description_learn_2}
-					sub3={ResourceStrings.description_learn_3}
+					bod={Learn()}
 				/>
 				<Stream/>
 				<HackerStories/>
