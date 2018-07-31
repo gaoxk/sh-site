@@ -37,13 +37,16 @@ p, li {
 }
 
 button {
+  border: 1px solid;
   margin-top: 2%;
   transition: background .25s;
-  background-color: transparent;
+  border-radius: 100px !important;
+  color: white;
 }
 
 button:hover {
   transition: background .25s;
+  background-color: white !important;
 }
 
 /* Nav bar */
@@ -58,7 +61,7 @@ button:hover {
 }
 
 /* Hero and Description*/
-.hero, .description, .stream, .hacker-stories, .sponsor, .how-it-works {
+.hero, .description, .stream, .hacker-stories, .sponsor, .how-it-works, .contact {
   height: 100vh;
   position: relative;
   overflow: hidden;
@@ -107,14 +110,11 @@ button:hover {
 }
 
 .hero button {
-  border: 1px solid #3c56a5;
+  border-color: #3c56a5;
   background-color: #3c56a5;
-  border-radius: 100px;
-  color: white;
 }
 
 .hero button:hover {
-  background-color: white;
   color: #3c56a5;
 }
 
@@ -278,11 +278,10 @@ button:hover {
 }
 
 /* Contact */
-.contact {
-  height: 100vh;
-  position: relative;
-  overflow: hidden;
+.contact .container{
+  top: 100%;
 }
+
 .contact label{
   margin-top: 2%;
 }
@@ -300,6 +299,25 @@ button:hover {
   max-width: 80%;
   display: block;
   margin : 0 auto;
+}
+
+.contact button {
+  background-color: #ec1b69;
+}
+
+.contact button:hover {
+  border-color: #ec1b69;
+  color: #ec1b69;
+}
+
+.newsletter button {
+  background-color: #3c56a5;
+  color: white;
+}
+
+.newsletter button:hover {
+  border-color: #3c56a5;
+  color: #3c56a5;
 }
 
 /* Footer */

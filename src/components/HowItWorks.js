@@ -50,19 +50,19 @@ class HowItWorks extends Component {
 						<p>{ResourceStrings.how_in_24}</p>
 						<div className='row'>
 							<div
-								className={'col-md-4 ' + this.state.visible[0] + '-nav blue'}
+								className={'col-md-4 ' + this.state.visible[0] + '-nav'}
 								style={{color: this.state.colors[0]}}
 								onClick={() => this.handleClick(0)}>
 								<h4>{ResourceStrings.how_plan}</h4>
 							</div>
 							<div
-								className={'col-md-4 ' + this.state.visible[1] + '-nav red'}
+								className={'col-md-4 ' + this.state.visible[1] + '-nav'}
 								style={{color: this.state.colors[1]}}
 								onClick={() => this.handleClick(1)}>
       					<h4>{ResourceStrings.how_proto}</h4>
       				</div>
 							<div
-								className={'col-md-4 ' + this.state.visible[2] + '-nav green'}
+								className={'col-md-4 ' + this.state.visible[2] + '-nav'}
 								style={{color: this.state.colors[2]}}
 								onClick={() => this.handleClick(2)}>
       					<h4>{ResourceStrings.how_present}</h4>

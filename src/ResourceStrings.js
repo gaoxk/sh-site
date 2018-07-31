@@ -54,7 +54,6 @@ const ResourceStrings = {
 	img_2_alt: 'Third picture describing ',
 	news: 'Newsletter',
 	news_desc: 'Subscribe to StaterHacks today and keep updated of upcoming hackathons and other events hosted by StaterHacks!',
-	news_sub: 'Subscribe Now',
 	send: 'Send',
 	sign_up: 'Sign Up',
 	subscribe: 'Subscribe',
