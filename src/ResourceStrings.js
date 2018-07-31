@@ -59,6 +59,7 @@ const ResourceStrings = {
 	sign_up: 'Sign Up',
 	subscribe: 'Subscribe',
 	sponsors: 'Sponsors',
+	sponsor_soon: 'Sponsor list coming soon!',
 	partners: 'Partners',
 	starterhacks: 'StarterHacks 2019',
 	starterhacks_date: 'University of Waterloo - Date 2019 to Date 2019',
