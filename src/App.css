@@ -75,16 +75,16 @@ button:hover {
 
 @media (max-width: 1025px) {
   .hero-text, .description-text {
-    width: 80%;
+  width: 80%;
   }
 }
 
 @media (min-width: 1025px) {
   .hero-text, .description-text {
-    width: 50%;
+  width: 50%;
   }
   .hero h1 {
-    font-size: 4em;
+  font-size: 4em;
   }
 }
 
@@ -101,10 +101,6 @@ button:hover {
 }
 
 /* How It Works */
-.how-it-works {
-  background-color: green;
-}
-
 .how-it-works img {
   position: absolute;
   width: 50%;
@@ -112,17 +108,49 @@ button:hover {
   top: 5%;
 }
 
-.how-it-works .nope {
-  visibility: hidden;
+.how-it-works .nope{
+  opacity: 0;
+}
+
+
+.how-it-works .nope-nav{
+  color: black !important;
+}
+
+.how-it-works .here-nav{
+  z-index: 1;
+}
+
+.how-it-works .here-nav:after{
+  z-index: -1;
+  content: '';
+  display: block;
+  position: absolute;
+  top: -10px;
+  bottom: -10px;
+  left: -10px;
+  right: -10px;
+  border-radius: 10px;
+  box-shadow: 0 0 5px 3px rgb(0, 0, 0, 0.1);
+  background-color: white;
 }
 
 .how-it-works-text {
   margin-top: 25%;
 }
 
-.how-it-works .col-md-2 {
+.how-it-works .col-md-4 {
   text-align: center;
 }
+
+.how-it-works .row {
+  margin-top: 3%;
+  border: 1px solid #e0e0e0;
+  border-radius: 10px;
+  background-color: #e0e0e0;
+  width: 45%;
+}
+
 
 /* Stream */
 .stream h1, .stream h2, .stream h4 {
@@ -198,14 +226,14 @@ button:hover {
 
 /* FAQ */
 .accordion {
-    margin-top: 2%;
-    cursor: pointer;
-    padding: 2%;
-    width: 100%;
-    border-radius: 7px;
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-    outline: none;
-    background-color: transparent;
+  margin-top: 2%;
+  cursor: pointer;
+  padding: 2%;
+  width: 100%;
+  border-radius: 7px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  outline: none;
+  background-color: transparent;
 }
 
 .accordion:hover {
@@ -228,6 +256,7 @@ button:hover {
 /* Sponsor */
 .sponsor {
   text-align: center;
+  height: 30vh;
 }
 
 /* Contact */
