@@ -7,7 +7,8 @@ class NavComponent extends Component {
 	constructor (props) {
 		super(props);
 		this.state = {
-			visibility: 'visible'
+			visibility: 'visible',
+			lastScrollPos: 0
 		};
 		this.animate = this.animate.bind(this);
 	}
@@ -35,9 +36,23 @@ class NavComponent extends Component {
 			return null;
 		}
 
+		if (scrollPos < this.state.lastScrollPos) {
+			this.setState({
+				className: 'animated fadeInDown oppa'
+			});
+			this.setState({lastScrollPos: scrollPos});
+			return null;
+		} else {
+			this.setState({
+				className: 'animated fadeOutUp'
+			});
+		}
+
+		this.setState({lastScrollPos: scrollPos});
+
 		if (event.clientY < 100) {
 			this.setState({
-				className: 'animated fadeInDown'
+				className: 'animated fadeInDown oppa'
 			});
 		} else {
 			this.setState({

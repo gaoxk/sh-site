@@ -57,7 +57,11 @@ button:hover {
 }
 
 .navbar-brand {
-   padding-top: 0.5em;
+  padding-top: 0.5em;
+}
+
+.navbar.fadeInDown.oppa {
+  background-color: rgb(255, 255, 255, 0.5);
 }
 
 /* Hero and Description*/
