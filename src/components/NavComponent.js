@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import {Nav, Navbar, NavItem} from 'react-bootstrap';
+import Scrollchor from 'react-scrollchor';
 
 import ResourceStrings from './../ResourceStrings';
 import logo from './../assets/logo.png';
@@ -84,20 +85,30 @@ class NavComponent extends Component {
 					</Navbar.Brand>
       	</Navbar.Header>
       	<Nav pullRight>
-					<NavItem eventKey={1} href='#about'>
-						<p>{ResourceStrings.about}</p>
+					<NavItem eventKey={1}>
+						<Scrollchor to='#about' className="nav-link">
+							<p>{ResourceStrings.about}</p>
+						</Scrollchor>
 					</NavItem>
-					<NavItem eventKey={2} href='#hacker-stories'>
-						<p>{ResourceStrings.hacker_stories}</p>
+					<NavItem eventKey={2}>
+						<Scrollchor to='#hacker-stories' className="nav-link">
+							<p>{ResourceStrings.hacker_stories}</p>
+						</Scrollchor>
 					</NavItem>
-					<NavItem eventKey={3} href='#sponsor'>
-						<p>{ResourceStrings.sponsors}</p>
+					<NavItem eventKey={3}>
+						<Scrollchor to='#sponsor' className="nav-link">
+							<p>{ResourceStrings.sponsors}</p>
+						</Scrollchor>
 					</NavItem>
-					<NavItem eventKey={4} href='#faq'>
-						<p>{ResourceStrings.faq.toUpperCase()}</p>
+					<NavItem eventKey={4}>
+						<Scrollchor to='#faq' className="nav-link">
+							<p>{ResourceStrings.faq.toUpperCase()}</p>
+						</Scrollchor>
 					</NavItem>
-					<NavItem eventKey={5} href='#contact'>
-						<p>{ResourceStrings.contact}</p>
+					<NavItem eventKey={5}>
+						<Scrollchor to='#contact' className="nav-link">
+							<p>{ResourceStrings.contact}</p>
+						</Scrollchor>
 					</NavItem>
     		</Nav>
 	  	</Navbar>
