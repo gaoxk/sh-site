@@ -38,13 +38,13 @@ p, li {
 button {
   border: 1px solid;
   margin-top: 2%;
-  transition: background .25s;
   border-radius: 100px !important;
   color: white;
+  width: 33%;
+  transition: background .25s;
 }
 
 button:hover {
-  transition: background .25s;
   background-color: white !important;
 }
 
@@ -327,7 +327,7 @@ button:hover {
 
 .newsletter button {
   background-color: #3c56a5;
-  color: white;
+  width: 50%;
 }
 
 .newsletter button:hover {
