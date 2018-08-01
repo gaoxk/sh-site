@@ -3,7 +3,7 @@ import ResourceStrings from './../ResourceStrings';
 
 import plan from './../assets/Plan.png';
 import proto from './../assets/Prototype.png';
-import present from './../assets/ideal.png';
+import present from './../assets/Present.png';
 
 class HowItWorks extends Component {
 	constructor(props) {
