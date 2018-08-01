@@ -80,9 +80,11 @@ class NavComponent extends Component {
 		return (
 			<Navbar fixedTop {... this.state}>
 				<Navbar.Header>
-					<Navbar.Brand>
+					<Scrollchor to='#hero' className="nav-link">
+						<Navbar.Brand>
 	          	<img src={logo} alt='starterhacks logo'/>
-					</Navbar.Brand>
+						</Navbar.Brand>
+					</Scrollchor>
       	</Navbar.Header>
       	<Nav pullRight>
 					<NavItem eventKey={1}>
