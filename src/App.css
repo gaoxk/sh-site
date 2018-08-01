@@ -51,17 +51,30 @@ button:hover {
 
 /* Nav bar */
 .navbar {
-  background-color: transparent;
+  background-color: white;
   top: 2%;
   border: 0;
+  transition: visibility 0.25s;
 }
 
 .navbar-brand {
   padding-top: 0.5em;
 }
 
-.navbar.fadeInDown.oppa {
-  background-color: rgb(255, 255, 255, 0.5);
+.fadeInDown {
+  -webkit-animation: fadeInDown 0.25s; /* Safari 4+ */
+  -moz-animation:    fadeInDown 0.25s; /* Fx 5+ */
+  -o-animation:      fadeInDown 0.25s; /* Opera 12+ */
+  animation:         fadeInDown 0.25s; /* IE 10+, Fx 29+ */
+  visibility: visible;
+}
+
+.fadeOutUp {
+  -webkit-animation: fadeOutUp 0.25s; /* Safari 4+ */
+  -moz-animation:    fadeOutUp 0.25s; /* Fx 5+ */
+  -o-animation:      fadeOutUp 0.25s; /* Opera 12+ */
+  animation:         fadeOutUp 0.25s; /* IE 10+, Fx 29+ */
+  visibility: hidden;
 }
 
 /* Hero and Description*/

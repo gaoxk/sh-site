@@ -7,61 +7,44 @@ class NavComponent extends Component {
 	constructor (props) {
 		super(props);
 		this.state = {
+			className: 'animated fadeInDown',
 			visibility: 'visible',
-			lastScrollPos: 0
+			lastScrollPos: 0,
+			lastMovePos: 0
 		};
 		this.animate = this.animate.bind(this);
 	}
 
 	componentDidMount () {
-		window.addEventListener('mousemove', this.animate, { passive: true });
 		window.addEventListener('scroll', this.animate, { passive: true });
 	}
 
 	componentWillUnmount () {
-		window.removeEventListener('mousemove', this.animate);
 		window.removeEventListener('scroll', this.animate);
 	}
 
 	animate (event) {
 		const scrollPos = window.scrollY;
-		if (scrollPos > window.innerHeight * 0.25) {
-			this.setState({
-				className: 'animated fadeOutUp'
-			});
-		} else {
+		const ogcn = this.state.className + '';
+
+		if (!ogcn.includes('fadeInDown') && ogcn != '' && scrollPos < this.state.lastScrollPos) {
 			this.setState({
 				className: 'animated fadeInDown'
 			});
-			return null;
-		}
-
-		if (scrollPos < this.state.lastScrollPos) {
-			this.setState({
-				className: 'animated fadeInDown oppa'
-			});
-			this.setState({lastScrollPos: scrollPos});
-			return null;
-		} else {
+		} else if (scrollPos > this.state.lastScrollPos) {
 			this.setState({
 				className: 'animated fadeOutUp'
 			});
-		}
-
-		this.setState({lastScrollPos: scrollPos});
-
-		if (event.clientY < 100) {
-			this.setState({
-				className: 'animated fadeInDown oppa'
-			});
 		} else {
 			this.setState({
-				className: 'animated fadeOutUp'
+				className: ''
 			});
 		}
+		this.setState({lastScrollPos: scrollPos, lastMovePos: event.clientY});
 	}
 
 	render() {
+		window.scroll({behaviour: 'smooth'});
 		return (
 			<Navbar fixedTop {... this.state}>
 				<Navbar.Header>

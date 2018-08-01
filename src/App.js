@@ -19,7 +19,7 @@ import gain from './assets/Gain.png';
 class App extends Component {
 	render() {
 		return (
-			<div className="App">
+			<div className='App'>
 				<NavComponent/>
 				<Hero/>
 				<Description
