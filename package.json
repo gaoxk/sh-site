@@ -1,7 +1,6 @@
 {
   "name": "sh-2019",
   "version": "0.1.0",
-  "private": true,
   "homepage": " https://gaoxk.github.io/sh-2019",
   "dependencies": {
     "eslint": "^5.1.0",
