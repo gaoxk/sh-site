@@ -3,7 +3,7 @@ import ResourceStrings from './../ResourceStrings';
 
 const Sponsor = props => (
 	<div className='container sponsor' id='sponsor'>
-		<h1>{this.props.title}</h1>
+		<h1>{props.title}</h1>
 		<p>{ResourceStrings.sponsor_soon.toUpperCase()}</p>
 	</div>
 );
