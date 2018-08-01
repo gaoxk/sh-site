@@ -17,7 +17,6 @@ body, html {
 h1 {
   font-family: 'Montserrat', sans-serif;
   font-weight: 0;
-  transform: uppercase;
 }
 
 a {
@@ -52,13 +51,12 @@ button:hover {
 /* Nav bar */
 .navbar {
   background-color: white;
-  top: 2%;
   border: 0;
-  transition: visibility 0.25s;
+  transition: visibility 0.25s, background-color 0.25s;
 }
 
-.navbar-brand {
-  padding-top: 0.5em;
+.hero-nav {
+  background-color: transparent;
 }
 
 .fadeInDown {

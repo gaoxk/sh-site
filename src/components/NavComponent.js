@@ -7,26 +7,42 @@ class NavComponent extends Component {
 	constructor (props) {
 		super(props);
 		this.state = {
-			className: 'animated fadeInDown',
+			className: 'animated fadeInDown hero-nav',
 			visibility: 'visible',
-			lastScrollPos: 0,
-			lastMovePos: 0
+			lastScrollPos: 0
 		};
-		this.animate = this.animate.bind(this);
+		this.onScroll = this.onScroll.bind(this);
+		this.onMouseMove = this.onMouseMove.bind(this);
 	}
 
 	componentDidMount () {
-		window.addEventListener('scroll', this.animate, { passive: true });
+		window.addEventListener('mousemove', this.onMouseMove, { passive: true });
+		window.addEventListener('scroll', this.onScroll, { passive: true });
 	}
 
 	componentWillUnmount () {
-		window.removeEventListener('scroll', this.animate);
+		window.removeEventListener('mousemove', this.onMouseMove);
+		window.removeEventListener('scroll', this.onScroll);
 	}
 
-	animate (event) {
+	onMouseMove (event) {
+		if (event.pageY < window.innerHeight*1.5) {
+			return null;
+		}
+		if (event.clientY > 100) {
+			this.setState({
+				className: 'animated fadeOutUp'
+			});
+		} else {
+			this.setState({
+				className: 'animated fadeInDown'
+			});
+		}
+	}
+
+	onScroll (event) {
 		const scrollPos = window.scrollY;
 		const ogcn = this.state.className + '';
-
 		if (!ogcn.includes('fadeInDown') && ogcn != '' && scrollPos < this.state.lastScrollPos) {
 			this.setState({
 				className: 'animated fadeInDown'
@@ -40,7 +56,20 @@ class NavComponent extends Component {
 				className: ''
 			});
 		}
-		this.setState({lastScrollPos: scrollPos, lastMovePos: event.clientY});
+		if (scrollPos < window.innerHeight * 0.33){
+			this.setState({
+				style: {
+					backgroundColor: 'transparent'
+				}
+			});
+		} else {
+			this.setState({
+				style: {
+					backgroundColor: 'white'
+				}
+			});
+		}
+		this.setState({lastScrollPos: scrollPos});
 	}
 
 	render() {
