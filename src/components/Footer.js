@@ -13,7 +13,7 @@ class Footer extends Component {
 		const len = svgs.length;
 		for(let i = 0; i<len; i++) {
 			icons.push(
-				<a href={ResourceStrings.media[i]}>
+				<a href={ResourceStrings.media[i]} key={i}>
 					<img src={svgs[i]} alt={ResourceStrings.media[i]} />
 				</a>
 			);

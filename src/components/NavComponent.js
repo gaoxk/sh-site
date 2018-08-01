@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import {Nav, Navbar, NavItem} from 'react-bootstrap';
+
 import ResourceStrings from './../ResourceStrings';
 import logo from './../assets/logo.png';
 
@@ -9,7 +10,7 @@ class NavComponent extends Component {
 		this.state = {
 			className: 'animated fadeInDown hero-nav',
 			visibility: 'visible',
-			lastScrollPos: 0
+			lastscrollpos: 0
 		};
 		this.onScroll = this.onScroll.bind(this);
 		this.onMouseMove = this.onMouseMove.bind(this);
@@ -44,11 +45,11 @@ class NavComponent extends Component {
 		const scrollPos = window.scrollY;
 		const ogcn = this.state.className + '';
 		if (!ogcn.includes('fadeInDown') && ogcn !== ''
-				&& scrollPos < this.state.lastScrollPos) {
+				&& scrollPos < this.state.lastscrollpos) {
 			this.setState({
 				className: 'animated fadeInDown'
 			});
-		} else if (scrollPos > this.state.lastScrollPos) {
+		} else if (scrollPos > this.state.lastscrollpos) {
 			this.setState({
 				className: 'animated fadeOutUp'
 			});
@@ -70,7 +71,7 @@ class NavComponent extends Component {
 				}
 			});
 		}
-		this.setState({lastScrollPos: scrollPos});
+		this.setState({lastscrollpos: scrollPos});
 	}
 
 	render() {

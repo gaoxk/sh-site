@@ -14,6 +14,7 @@ class Faq extends Component {
 				<Question
 					question={ResourceStrings.questions[i]}
 					answer={ResourceStrings.answers[i]}
+					key={i}
 				/>
 			);
 		}

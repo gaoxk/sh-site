@@ -1,4 +1,6 @@
 import React from 'react';
+import PropTypes from 'prop-types';
+
 import ResourceStrings from './../ResourceStrings';
 
 const Sponsor = props => (
@@ -7,5 +9,9 @@ const Sponsor = props => (
 		<p>{ResourceStrings.sponsor_soon.toUpperCase()}</p>
 	</div>
 );
+
+Sponsor.propTypes ={
+	title: PropTypes.string.isRequired
+};
 
 export default Sponsor;

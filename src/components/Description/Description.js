@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
 const Description = props => (
 	<div className='description' id={props.id}>
@@ -11,4 +12,13 @@ const Description = props => (
 		</div>
 	</div>
 );
+
+
+Description.propTypes ={
+	id: PropTypes.string,
+	title: PropTypes.string.isRequired,
+	style: PropTypes.objectOf(PropTypes.string)
+	//not sure how to proptype jsx or image sources
+};
+
 export default Description;
