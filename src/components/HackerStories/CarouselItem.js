@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import ResourceStrings from './../../ResourceStrings';
 import photo from './../../assets/square_photo.PNG';
 
 class CarouselItem extends Component {
@@ -7,7 +6,7 @@ class CarouselItem extends Component {
 		return (
 			<div className={'carousel-item ' + this.props.className} style={this.props.style}>
 				<span className='carousel-item-img'>
-					<img src={photo} />
+					<img src={photo} alt='hacker'/>
 				</span>
 				<span className='carousel-item-text' >
 					<h3>{this.props.title}</h3>

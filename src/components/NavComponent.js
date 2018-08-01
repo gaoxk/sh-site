@@ -43,7 +43,8 @@ class NavComponent extends Component {
 	onScroll (event) {
 		const scrollPos = window.scrollY;
 		const ogcn = this.state.className + '';
-		if (!ogcn.includes('fadeInDown') && ogcn != '' && scrollPos < this.state.lastScrollPos) {
+		if (!ogcn.includes('fadeInDown') && ogcn !== ''
+				&& scrollPos < this.state.lastScrollPos) {
 			this.setState({
 				className: 'animated fadeInDown'
 			});
@@ -78,7 +79,7 @@ class NavComponent extends Component {
 			<Navbar fixedTop {... this.state}>
 				<Navbar.Header>
 					<Navbar.Brand>
-	          	<img src={logo} />
+	          	<img src={logo} alt='starterhacks logo'/>
 					</Navbar.Brand>
       	</Navbar.Header>
       	<Nav pullRight>

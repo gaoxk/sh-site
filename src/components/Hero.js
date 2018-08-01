@@ -7,7 +7,7 @@ class Hero extends Component {
 	render() {
 		return (
 			<div className='hero'>
-				<img src={hero}/>
+				<img src={hero} alt='problem solving at StarterHacks'/>
 				<div className='container'>
 					<div className='hero-text'>
 						<h1>{ResourceStrings.starterhacks}</h1>

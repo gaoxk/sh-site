@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import ResourceStrings from './../../ResourceStrings';
 
 class CarouselBar extends Component {
 	render() {

@@ -18,7 +18,7 @@ class Faq extends Component {
 		}
 		return (
 			<div className='faq' id='faq'>
-				<img src={faq_img} />
+				<img src={faq_img} alt='frequently asked questions'/>
 				<div className='container hero'>
 					<div className='row'>
 						<div className='col-md-4'>

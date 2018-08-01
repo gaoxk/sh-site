@@ -7,7 +7,7 @@ class Stream extends Component {
 		return (
 			<div className='container stream'>
 				<h1>{ResourceStrings.stream_title}</h1>
-				<img src={streamPhoto}/>
+				<img src={streamPhoto} alt='depiction of streams'/>
 				<div className='row'>
 					<div className='col-md-4'>
 						<h3 style={{color: ResourceStrings.green}}>

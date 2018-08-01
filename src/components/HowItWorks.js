@@ -39,7 +39,7 @@ class HowItWorks extends Component {
 		let i;
 		for(i=0; i<3; i++){
 			imgs.push(
-				<img src={assets[i]} className={this.state.visible[i] + ' imger'}/>
+				<img src={assets[i]} className={this.state.visible[i] + ' imger'} alt='how starterhacks works'/>
 			);
 		}
 		return (
