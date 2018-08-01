@@ -1,0 +1,348 @@
+/*
+  #3c56a5 blue
+  #ec1b69 red
+  #80c241 green
+*/
+
+body, html {
+  min-height: 100%;
+  max-width: 100%;
+  overflow-x: hidden;
+  background-color: white;
+  color: black;
+  font-family: 'Lato', sans-serif;
+  transition: background .5s ease, visibility .5s ease;
+}
+
+h1 {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 0;
+}
+
+a {
+  color: inherit !important;
+  text-decoration: none !important;
+}
+
+p, li {
+  font-size: 1.25em;
+}
+
+.break {
+  width: 10%;
+  margin-top: 3%;
+  margin-bottom: 3%;
+  font-size: 0.1em;
+}
+
+button {
+  border: 1px solid;
+  margin-top: 2%;
+  border-radius: 100px !important;
+  color: white;
+  width: 33%;
+  transition: background .25s;
+}
+
+button:hover {
+  background-color: white !important;
+}
+
+/* Nav bar */
+.navbar {
+  background-color: white;
+  border: 0;
+  transition: visibility 0.25s, background-color 0.25s;
+}
+
+.hero-nav {
+  background-color: transparent;
+}
+
+.fadeInDown {
+  -webkit-animation: fadeInDown 0.25s; /* Safari 4+ */
+  -moz-animation:    fadeInDown 0.25s; /* Fx 5+ */
+  -o-animation:      fadeInDown 0.25s; /* Opera 12+ */
+  animation:         fadeInDown 0.25s; /* IE 10+, Fx 29+ */
+  visibility: visible;
+}
+
+.fadeOutUp {
+  -webkit-animation: fadeOutUp 0.25s; /* Safari 4+ */
+  -moz-animation:    fadeOutUp 0.25s; /* Fx 5+ */
+  -o-animation:      fadeOutUp 0.25s; /* Opera 12+ */
+  animation:         fadeOutUp 0.25s; /* IE 10+, Fx 29+ */
+  visibility: hidden;
+}
+
+/* Hero and Description*/
+.hero, .description, .stream, .hacker-stories, .sponsor, .how-it-works, .contact {
+  height: 100vh;
+  position: relative;
+  overflow: hidden;
+  text-align: left;
+}
+
+.hero-text, .description-text {
+  margin-top: 25%;
+}
+
+.hero img {
+  position: absolute;
+  height: 99%;
+  width: 50%;
+  right: 0;
+}
+
+.description {
+  overflow: visible;
+}
+
+.description-text {
+  transform: translateX(100%);
+}
+
+.description img {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 45%;
+}
+
+@media (max-width: 1025px) {
+  .hero-text, .description-text {
+  width: 80%;
+  }
+}
+
+@media (min-width: 1025px) {
+  .hero-text, .description-text {
+  width: 50%;
+  }
+  .hero h1 {
+  font-size: 4em;
+  }
+}
+
+.hero button {
+  border-color: #3c56a5;
+  background-color: #3c56a5;
+}
+
+.hero button:hover {
+  color: #3c56a5;
+}
+
+/* How It Works */
+.how-it-works img {
+  position: absolute;
+  width: 50%;
+  left: 50%;
+  top: 5%;
+}
+
+.how-it-works .nope{
+  opacity: 0;
+}
+
+
+.how-it-works .nope-nav{
+  color: black !important;
+}
+
+.how-it-works .here-nav{
+  z-index: 1;
+}
+
+.how-it-works .here-nav:after{
+  z-index: -1;
+  content: '';
+  display: block;
+  position: absolute;
+  top: -10px;
+  bottom: -10px;
+  left: -10px;
+  right: -10px;
+  border-radius: 10px;
+  box-shadow: 0 0 5px 3px rgb(0, 0, 0, 0.1);
+  background-color: white;
+}
+
+.how-it-works-text {
+  margin-top: 25%;
+}
+
+.how-it-works .col-md-4 {
+  text-align: center;
+}
+
+.how-it-works .row {
+  margin-top: 3%;
+  border: 1px solid #e0e0e0;
+  border-radius: 10px;
+  background-color: #e0e0e0;
+  width: 45%;
+}
+
+
+/* Stream */
+.stream h1, .stream h2, .stream h4 {
+  text-align: center;
+}
+
+.stream h3, .stream p {
+  margin-top: 10%;
+}
+
+.stream img {
+  width: 100%;
+}
+
+/* Hacker Stories*/
+.hacker-stories {
+  overflow: visible;
+  white-space: nowrap;
+}
+
+.carousel-item {
+  margin-top: 2%;
+  padding: 1%;
+  height: 60%;
+  width: 70%;
+  border-radius: 15px;
+  box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2);
+  outline: none;
+  background-color: transparent;
+  display: inline-block;
+  transition: transform 2s ease;
+  margin-right: 5%;
+  white-space: nowrap;
+
+}
+
+.carousel-item-grey {
+  background-color: grey;
+  opacity: 0.5 !important;
+}
+
+.carousel-left {
+
+}
+
+.carousel-right {
+  z-index: 1;
+}
+
+.carousel-bar {
+  margin-top: 2%;
+  padding: 1%;
+  width: 70%;
+  border-radius: 15px;
+  box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2);
+  outline: none;
+  background-color: transparent;
+  display: inline-block;
+}
+
+.carousel-item-img {
+  max-width: 50%;
+  overflow: hidden;
+  float: left;
+}
+
+.carousel-item-text {
+  max-width: 50%;
+  float: right;
+  padding: 3%;
+  white-space: normal;
+}
+
+/* FAQ */
+.accordion {
+  margin-top: 2%;
+  cursor: pointer;
+  padding: 2%;
+  width: 100%;
+  border-radius: 7px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  outline: none;
+  background-color: transparent;
+}
+
+.accordion:hover {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.1);
+  transition-property: box-shadow 5s ease;
+}
+
+.answer {
+  margin-top: 2%;
+  padding: 0 5%;
+  transition: display 1s;
+}
+
+.faq img {
+  position: absolute;
+  width: 30%;
+  margin-top: 5%;
+}
+
+/* Sponsor */
+.sponsor {
+  text-align: center;
+  height: 30vh;
+}
+
+/* Contact */
+.contact .container{
+  top: 100%;
+}
+
+.contact label{
+  margin-top: 2%;
+}
+
+.newsletter {
+  text-align: center;
+  padding: 10%;
+  border-radius: 7px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  display: block;
+  margin : 0 auto;
+}
+
+.newsletter input {
+  max-width: 80%;
+  display: block;
+  margin : 0 auto;
+}
+
+.contact button {
+  background-color: #ec1b69;
+}
+
+.contact button:hover {
+  border-color: #ec1b69;
+  color: #ec1b69;
+}
+
+.newsletter button {
+  background-color: #3c56a5;
+  width: 50%;
+}
+
+.newsletter button:hover {
+  border-color: #3c56a5;
+  color: #3c56a5;
+}
+
+/* Footer */
+.footer {
+  background-color: red;
+  height: 10vh;
+  text-align: center;
+}
+
+.footer img{
+  height: 5vh;
+  margin: 1%;
+}
