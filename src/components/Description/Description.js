@@ -1,19 +1,14 @@
-import React, { Component } from 'react';
+import React from 'react';
 
-class Description extends Component {
-	render() {
-		return (
-			<div className='description' id={this.props.id}>
-				<img src={this.props.imger} alt='about StarterHacks'/>
-				<div className='container'>
-					<div className='description-text'>
-						<h1>{this.props.title}</h1>
-						{this.props.bod}
-					</div>
-				</div>
+const Description = props => (
+	<div className='description' id={props.id}>
+		<img src={props.imger} alt='about StarterHacks'/>
+		<div className='container'>
+			<div className='description-text'>
+				<h1>{props.title}</h1>
+				{props.bod}
 			</div>
-		);
-	}
-}
-
+		</div>
+	</div>
+);
 export default Description;

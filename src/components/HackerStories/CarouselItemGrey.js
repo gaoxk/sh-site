@@ -1,12 +1,11 @@
-import React, { Component } from 'react';
+import React from 'react';
 
-class CarouselItemGrey extends Component {
-	render() {
-		return (
-			<div className={'carousel-item carousel-item-grey'} style={this.props.style}>
-			</div>
-		);
-	}
-}
+const CarouselItemGrey = props => (
+	<div
+		className={'carousel-item carousel-item-grey'}
+		style={props.style}
+	>
+	</div>
+);
 
 export default CarouselItemGrey;
