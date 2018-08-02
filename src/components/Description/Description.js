@@ -17,7 +17,9 @@ const Description = props => (
 Description.propTypes ={
 	id: PropTypes.string,
 	title: PropTypes.string.isRequired,
-	style: PropTypes.objectOf(PropTypes.string)
+	style: PropTypes.objectOf(PropTypes.string),
+	bod: PropTypes.element.isRequired,
+	imger: PropTypes.string
 	//not sure how to proptype jsx or image sources
 };
 
