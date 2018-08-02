@@ -20,7 +20,6 @@ Description.propTypes ={
 	style: PropTypes.objectOf(PropTypes.string),
 	bod: PropTypes.element.isRequired,
 	imger: PropTypes.string
-	//not sure how to proptype jsx or image sources
 };
 
 export default Description;
