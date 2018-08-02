@@ -1,6 +1,6 @@
 import React from 'react';
 import ResourceStrings from './../ResourceStrings';
-
+import NewsLetter from './Contact/NewsLetter';
 import hero from './../assets/Hero.png';
 
 const Hero = () => (
@@ -11,11 +11,10 @@ const Hero = () => (
 				<h1>{ResourceStrings.starterhacks}</h1>
 				<p>{ResourceStrings.starterhacks_date.toUpperCase()}</p>
                 		<h2>{ResourceStrings.starterhacks_header}</h2>
-				<a href='#contact'>
-        		<button type='button' className='btn'>
-						<h4>{ResourceStrings.subscribe.toUpperCase()}</h4>
-					</button>
-				</a>
+				<NewsLetter
+					header={false}
+					placeholder={ResourceStrings.sign_up_news}
+				/>
 			</div>
 		</div>
 	</div>

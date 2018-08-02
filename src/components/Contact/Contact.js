@@ -30,7 +30,10 @@ class Contact extends Component {
 							<ContactForm/>
 						</div>
 						<div className='col-md-6 newsletter'>
-							<NewsLetter/>
+							<NewsLetter
+								header={true}
+								placeholder={ResourceStrings.sign_up_email}
+							/>
 						</div>
 					</div>
 				</div>

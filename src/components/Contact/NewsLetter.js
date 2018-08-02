@@ -16,20 +16,22 @@ class NewsLetter extends Component {
 	render() {
 		return(
 			<div>
-    		<h2><strong>{ResourceStrings.news}</strong></h2>
-    		<p>{ResourceStrings.news_desc}</p>
+    		{this.props.header ?
+					<div><h2><strong>{ResourceStrings.news}</strong></h2>
+						<p>{ResourceStrings.news_desc}</p></div>
+					: null}
     		<form
-      	action='https://starterhacks.us15.list-manage.com/subscribe/post?u=9cabc53f9cf6bf533679316aa&amp;id=b8f1bed003'
-      	method='post'
-      	name='mc-embedded-subscribe-form'
-      	className='validate'
-      	target='_blank'
-      	noValidate
+        	action='https://starterhacks.us15.list-manage.com/subscribe/post?u=9cabc53f9cf6bf533679316aa&amp;id=b8f1bed003'
+        	method='post'
+        	name='mc-embedded-subscribe-form'
+        	className='validate'
+        	target='_blank'
+        	noValidate
     		>
       	<FormGroup controlId='formBasicText'>
       		<FormControl
       			name='EMAIL'
-      			placeholder={ResourceStrings.sign_up_email}
+      			placeholder={this.props.placeholder}
       			value={this.state.news}
       			onChange={(e) => this.handleChange(e)}
       		/>
