@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import {FormGroup, FormControl, ControlLabel} from 'react-bootstrap';
+import MailChimpEmail from './MailChimpEmail';
 import ResourceStrings from './../ResourceStrings';
 
 class Contact extends Component {
@@ -47,7 +48,7 @@ class Contact extends Component {
 										onChange={(e) => this.handleChange(e, 'message  ')}
 									/>
 									<a href='#contact'>
-            		  <button type='button' className='btn'>
+            		  	<button type='button' className='btn'>
 											<h4>{ResourceStrings.send.toUpperCase()}</h4>
 										</button>
 									</a>
@@ -57,18 +58,25 @@ class Contact extends Component {
 						<div className='col-md-6 newsletter'>
 							<h2><strong>{ResourceStrings.news}</strong></h2>
 							<p>{ResourceStrings.news_desc}</p>
-							<form>
+							<form
+								action='https://starterhacks.us15.list-manage.com/subscribe/post?u=9cabc53f9cf6bf533679316aa&amp;id=b8f1bed003'
+								method='post'
+								name='mc-embedded-subscribe-form'
+								className='validate'
+								target='_blank'
+								noValidate
+							>
 								<FormGroup controlId='formBasicText'>
 									<FormControl
-										type='text'
+										type='email'
+										name='EMAIL'
+										placeholder={ResourceStrings.sign_up_email}
 										value={this.state.news}
 										onChange={(e) => this.handleChange(e, 'news')}
 									/>
-									<a href='#contact'>
-            		    <button type='button' className='btn'>
-											<h4>{ResourceStrings.subscribe.toUpperCase()}</h4>
-										</button>
-									</a>
+            		  <button  type='submit' name='subscribe' className='btn'>
+										<h4>{ResourceStrings.subscribe.toUpperCase()}</h4>
+									</button>
 								</FormGroup>
 							</form>
 						</div>

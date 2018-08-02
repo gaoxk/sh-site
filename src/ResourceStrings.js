@@ -69,6 +69,8 @@ const ResourceStrings = {
 	news_desc: 'Subscribe to StaterHacks today and keep updated of upcoming hackathons and other events hosted by StaterHacks!',
 	send: 'Send',
 	sign_up: 'Sign Up',
+	sign_up_email : 'Enter your email address',
+	sign_up_news : 'Enter your email to sign up for our news letter',
 	subscribe: 'Subscribe',
 	sponsors: 'Sponsors',
 	sponsor_soon: 'Sponsor list coming soon!',
