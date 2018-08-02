@@ -24,7 +24,7 @@ class NewsLetter extends Component {
 						<p>{ResourceStrings.news_desc}</p></div>
 					: null}
     		<form
-        	action='https://starterhacks.us15.list-manage.com/subscribe/post?u=9cabc53f9cf6bf533679316aa&amp;id=b8f1bed003'
+        	action='https://starterhacks.us15.list-manage.com/subscribe/post?u=9cabc53f9cf6bf533679316aa&amp;id=93b18e0051'
         	method='post'
         	name='mc-embedded-subscribe-form'
         	className='validate'
