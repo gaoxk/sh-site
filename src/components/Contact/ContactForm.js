@@ -6,14 +6,14 @@ class ContactForm extends Component {
 	constructor(props) {
 		super(props);
 		this.state = {
-			name: '',
+			subject: '',
 			email: '',
 			message: '',
 		};
 		this.handleChange = this.handleChange.bind(this);
 	}
 	handleChange(e, type) {
-		type === 'name' && this.setState({ name: e.target.value });
+		type === 'subject' && this.setState({ subject: e.target.value });
 		type === 'email' && this.setState({ email: e.target.value });
 		type === 'message' && this.setState({ message: e.target.value });
 	}
@@ -21,11 +21,11 @@ class ContactForm extends Component {
 		return(
 			<form>
 				<FormGroup controlId='formBasicText'>
-					<ControlLabel><p>{ResourceStrings.contact_name}</p></ControlLabel>
+					<ControlLabel><p>{ResourceStrings.contact_subject}</p></ControlLabel>
 					<FormControl
 						type='text'
-						value={this.state.name}
-						onChange={(e) => this.handleChange(e, 'name')}
+						value={this.state.subject}
+						onChange={(e) => this.handleChange(e, 'subject')}
 					/>
 					<ControlLabel><p>{ResourceStrings.contact_email}</p></ControlLabel>
 					<FormControl
@@ -39,7 +39,13 @@ class ContactForm extends Component {
 						value={this.state.message}
 						onChange={(e) => this.handleChange(e, 'message')}
 					/>
-					<a href='#contact'>
+					<a
+						href={'mailto:contact@starterhacks.ca?subject='
+						 			+ this.state.subject
+									+ '&cc='
+									+ this.state.email
+									+ '&body='
+									+ this.state.message}>
 						<button type='button' className='btn'>
 							<h4>{ResourceStrings.send.toUpperCase()}</h4>
 						</button>

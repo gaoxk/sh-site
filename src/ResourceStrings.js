@@ -60,7 +60,7 @@ const ResourceStrings = {
 	],
 	contact: 'Contact',
 	contact_email: 'Email',
-	contact_name: 'Name',
+	contact_subject: 'Subject',
 	contact_message: 'Message',
 	img_1_alt: 'First picture describing ',
 	img_top_alt: 'Second picture describing ',
