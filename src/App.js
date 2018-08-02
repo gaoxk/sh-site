@@ -10,7 +10,7 @@ import HowItWorks from './components/HowItWorks';
 import Stream from './components/Stream';
 import Faq from './components/Faq';
 import Sponsor from './components/Sponsor';
-import Contact from './components/Contact';
+import Contact from './components/Contact/Contact';
 import Footer from './components/Footer';
 import HackerStories from './components/HackerStories/HackerStories';
 
