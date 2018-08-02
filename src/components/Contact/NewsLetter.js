@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
-import {FormGroup, FormControl, ControlLabel} from 'react-bootstrap';
+import PropTypes from 'prop-types';
+import {FormGroup, FormControl} from 'react-bootstrap';
 import ResourceStrings from './../../ResourceStrings';
 
 class NewsLetter extends Component {
@@ -10,9 +11,11 @@ class NewsLetter extends Component {
 		};
 		this.handleChange = this.handleChange.bind(this);
 	}
+
 	handleChange(e) {
 		this.setState({ news: e.target.value });
 	}
+
 	render() {
 		return(
 			<div>
@@ -44,5 +47,10 @@ class NewsLetter extends Component {
 		);
 	}
 }
+
+NewsLetter.proptypes = {
+	header: PropTypes.bool.isRequired,
+	placeholder: PropTypes.string.isRequired
+};
 
 export default NewsLetter;
