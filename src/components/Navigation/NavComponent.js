@@ -1,9 +1,9 @@
 import React, { Component } from 'react';
 import {Nav, Navbar, NavItem} from 'react-bootstrap';
-import Scrollchor from 'react-scrollchor';
+import ScrollchorItem from './ScrollchorItem';
 
-import ResourceStrings from './../ResourceStrings';
-import logo from './../assets/logo.png';
+import ResourceStrings from './../../ResourceStrings';
+import logo from './../../assets/logo.png';
 
 class NavComponent extends Component {
 	constructor (props) {
@@ -80,37 +80,37 @@ class NavComponent extends Component {
 		return (
 			<Navbar fixedTop {... this.state}>
 				<Navbar.Header>
-					<Scrollchor to='#hero' className="nav-link">
+					<ScrollchorItem to='#hero' className="nav-link">
 						<Navbar.Brand>
 	          	<img src={logo} alt='starterhacks logo'/>
 						</Navbar.Brand>
-					</Scrollchor>
+					</ScrollchorItem>
       	</Navbar.Header>
       	<Nav pullRight>
 					<NavItem eventKey={1}>
-						<Scrollchor to='#about' className="nav-link">
+						<ScrollchorItem to='#about'>
 							<p>{ResourceStrings.about}</p>
-						</Scrollchor>
+						</ScrollchorItem>
 					</NavItem>
 					<NavItem eventKey={2}>
-						<Scrollchor to='#hacker-stories' className="nav-link">
+						<ScrollchorItem to='#hacker-stories'>
 							<p>{ResourceStrings.hacker_stories}</p>
-						</Scrollchor>
+						</ScrollchorItem>
 					</NavItem>
 					<NavItem eventKey={3}>
-						<Scrollchor to='#sponsor' className="nav-link">
+						<ScrollchorItem to='#sponsor'>
 							<p>{ResourceStrings.sponsors}</p>
-						</Scrollchor>
+						</ScrollchorItem>
 					</NavItem>
 					<NavItem eventKey={4}>
-						<Scrollchor to='#faq' className="nav-link">
+						<ScrollchorItem to='#faq'>
 							<p>{ResourceStrings.faq.toUpperCase()}</p>
-						</Scrollchor>
+						</ScrollchorItem>
 					</NavItem>
 					<NavItem eventKey={5}>
-						<Scrollchor to='#contact' className="nav-link">
+						<ScrollchorItem to='#contact'>
 							<p>{ResourceStrings.contact}</p>
-						</Scrollchor>
+						</ScrollchorItem>
 					</NavItem>
     		</Nav>
 	  	</Navbar>

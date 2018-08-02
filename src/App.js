@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import './App.css';
 import ResourceStrings from './ResourceStrings';
 
-import NavComponent from './components/NavComponent';
+import NavComponent from './components/Navigation/NavComponent';
 import Hero from './components/Hero';
 import Description from './components/Description/Description';
 import { Gain, Learn} from './components/Description/Descriptions';

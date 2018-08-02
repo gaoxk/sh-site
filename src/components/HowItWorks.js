@@ -24,7 +24,6 @@ class HowItWorks extends Component {
 	}
 
 	handleClick(num) {
-		console.log(num);
 		let i;
 		let arr = ['here' , 'here', 'here'];
 		for(i=0; i<3; i++) {
