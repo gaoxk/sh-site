@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import {FormGroup, FormControl, ControlLabel} from 'react-bootstrap';
 import ResourceStrings from './../../ResourceStrings';
 
+import ContactForm from './ContactForm';
 import NewsLetter from './NewsLetter';
 
 class Contact extends Component {
@@ -26,33 +27,7 @@ class Contact extends Component {
 					<h1>{ResourceStrings.contact}</h1>
 					<div className='row' >
 						<div className='col-md-6'>
-							<form>
-								<FormGroup controlId='formBasicText'>
-									<ControlLabel><p>{ResourceStrings.contact_name}</p></ControlLabel>
-									<FormControl
-										type='text'
-										value={this.state.name}
-										onChange={(e) => this.handleChange(e, 'name')}
-									/>
-									<ControlLabel><p>{ResourceStrings.contact_email}</p></ControlLabel>
-									<FormControl
-										type='text'
-										value={this.state.email}
-										onChange={(e) => this.handleChange(e, 'email')}
-									/>
-									<ControlLabel><p>{ResourceStrings.contact_message}</p></ControlLabel>
-									<FormControl
-										componentClass='textarea'
-										value={this.state.message}
-										onChange={(e) => this.handleChange(e, 'message  ')}
-									/>
-									<a href='#contact'>
-            		  	<button type='button' className='btn'>
-											<h4>{ResourceStrings.send.toUpperCase()}</h4>
-										</button>
-									</a>
-								</FormGroup>
-							</form>
+							<ContactForm/>
 						</div>
 						<div className='col-md-6 newsletter'>
 							<NewsLetter/>
