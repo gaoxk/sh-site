@@ -54,9 +54,9 @@ const ResourceStrings = {
 		'What do I need to bring?'
 	],
 	media: [
-		'google.com',
-		'google.com',
-		'google.com'
+		'https://twitter.com/starterhacks',
+		'https://www.instagram.com/starterhacks_/',
+		'https://www.facebook.com/starterhacks/'
 	],
 	contact: 'Contact',
 	contact_email: 'Email',
