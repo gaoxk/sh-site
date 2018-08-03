@@ -32,6 +32,7 @@ class App extends Component {
 				<Description
 					title={ResourceStrings.description_learn}
 					bod={Learn()}
+					imger={gain}
 				/>
 				<Stream/>
 				<HackerStories/>

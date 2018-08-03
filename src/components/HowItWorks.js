@@ -47,12 +47,12 @@ class HowItWorks extends Component {
 			);
 		}
 		return (
-			<div className='how-it-works'>
-				<div className='container' id='how'>
+			<div className='how-it-works row container-fluid'>
+				<div className='container col-md-6' id='how'>
 					<div className='how-it-works-text'>
 						<h1>{ResourceStrings.how_it_works}</h1>
 						<p>{ResourceStrings.how_in_24}</p>
-						<div className='row'>
+						<div className='how-it-works-row row'>
 							<div
 								className={'col-md-4 ' + this.state.visible[0] + '-nav'}
 								style={{color: this.state.colors[0]}}
@@ -74,7 +74,9 @@ class HowItWorks extends Component {
 						</div>
 					</div>
 				</div>
-				{imgs}
+				<div className='col-md-6'>
+					{imgs}
+				</div>
 			</div>
 		);
 	}

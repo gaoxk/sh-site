@@ -48,6 +48,15 @@ button:hover {
   background-color: white !important;
 }
 
+@media (max-width: 768px) {
+  button {
+    width: inherit;
+  }
+  img {
+    position: relative !important;
+  }
+}
+
 /* Nav bar */
 .navbar {
   background-color: white;
@@ -57,6 +66,12 @@ button:hover {
 
 .hero-nav {
   background-color: transparent;
+}
+
+@media (max-width: 768px) {
+  .navbar {
+    visibility: hidden;
+  }
 }
 
 .fadeInDown {
@@ -89,7 +104,6 @@ button:hover {
 
 .hero img {
   position: absolute;
-  height: 99%;
   width: 50%;
   right: 0;
 }
@@ -98,29 +112,40 @@ button:hover {
   overflow: visible;
 }
 
-.description-text {
-  transform: translateX(100%);
-}
-
 .description img {
   position: absolute;
   left: 0;
   top: 0;
-  width: 45%;
+  width: 100%;
+  max-height: 100vh;
+}
+
+@media (max-width: 768px) {
+  .hero, .description, .stream, .hacker-stories, .sponsor, .how-it-works, .contact {
+    max-height: 200vh;
+    display: block;
+    overflow: auto;
+  }
+  .hero-text, .description-text {
+    margin-top: 5%;
+  }
+  .hero img {
+    width: 100%;
+  }
 }
 
 @media (max-width: 1025px) {
   .hero-text, .description-text {
-  width: 80%;
+    width: 80%;
   }
 }
 
 @media (min-width: 1025px) {
   .hero-text, .description-text {
-  width: 50%;
+    width: 50%;
   }
   .hero h1 {
-  font-size: 4em;
+    font-size: 4em;
   }
 }
 
@@ -136,15 +161,22 @@ button:hover {
 /* How It Works */
 .how-it-works img {
   position: absolute;
-  width: 50%;
-  left: 50%;
-  top: 5%;
+  width: 100%;
+  right: 0;
+}
+
+@media (max-width: 768px) {
+  .how-it-works {
+    height: 80vh;
+  }
+  .how-it-works img {
+    margin-top: 5%;
+  }
 }
 
 .how-it-works .nope{
-  opacity: 0;
+  visibility: hidden;
 }
-
 
 .how-it-works .nope-nav{
   color: black !important;
@@ -176,7 +208,7 @@ button:hover {
   text-align: center;
 }
 
-.how-it-works .row {
+.how-it-works-row {
   margin-top: 3%;
   border: 1px solid #e0e0e0;
   border-radius: 10px;
@@ -184,6 +216,27 @@ button:hover {
   width: 45%;
 }
 
+@media (max-width: 768px) {
+  .how-it-works-text {
+    transform: translateX(3%);
+  }
+  .how-it-works-row {
+    width: 100%;
+    margin-bottom: 2%;
+  }
+  .how-it-works img {
+    position: absolute !important;
+  }
+}
+
+@media (min-width: 1025px) {
+  .how-it-works-text {
+    transform: translateX(50%);
+  }
+  .how-it-works-row {
+    width: 45%;
+  }
+}
 
 /* Stream */
 .stream h1, .stream h2, .stream h4 {
@@ -192,6 +245,12 @@ button:hover {
 
 .stream h3, .stream p {
   margin-top: 10%;
+}
+
+@media (max-width: 768px) {
+  .stream h3, .stream p {
+    margin-top: 0;
+  }
 }
 
 .stream img {
@@ -257,6 +316,12 @@ button:hover {
   white-space: normal;
 }
 
+@media (max-width: 768px) {
+  .carousel-item-text {
+    visibility: hidden;
+  }
+}
+
 /* FAQ */
 .accordion {
   margin-top: 2%;
@@ -284,6 +349,17 @@ button:hover {
   position: absolute;
   width: 30%;
   margin-top: 5%;
+  left: 0;
+}
+
+@media (max-width: 768px) {
+  .faq {
+    height: 140vh;
+  }
+  .faq img {
+    width: 100%;
+    margin-top: 0;
+  }
 }
 
 /* Sponsor */
@@ -293,8 +369,9 @@ button:hover {
 }
 
 /* Contact */
-.contact .container{
-  top: 100%;
+.contact{
+  height: 90vh;
+  background-color: #F6F6F6;
 }
 
 .contact label{
@@ -308,6 +385,7 @@ button:hover {
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
   display: block;
   margin : 0 auto;
+  background-color: white;
 }
 
 .newsletter input {
@@ -335,9 +413,18 @@ button:hover {
   color: #3c56a5;
 }
 
+@media (max-width: 768px) {
+  .newsletter {
+    visibility: hidden;
+  }
+  .contact {
+    height: 65vh;
+  }
+}
+
 /* Footer */
 .footer {
-  background-color: red;
+  background-color: #C4C4C4;
   height: 10vh;
   text-align: center;
 }

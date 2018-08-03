@@ -4,7 +4,7 @@ import NewsLetter from './Contact/NewsLetter';
 import hero from './../assets/Hero.png';
 
 const Hero = () => (
-	<div className='hero' id='hero'>
+	<div className='hero container-fluid' id='hero'>
 		<img src={hero} alt='problem solving at StarterHacks'/>
 		<div className='container'>
 			<div className='hero-text'>
