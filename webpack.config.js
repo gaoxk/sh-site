@@ -43,7 +43,7 @@ module.exports = {
 		port: 3000,
 		open: true,
 		proxy: {
-			'/hello': 'http://localhost:8080',
+			'/': 'http://localhost:8080',
 			'changeOrigin': 'true'
 		}
 	},

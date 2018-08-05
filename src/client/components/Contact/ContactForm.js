@@ -10,13 +10,32 @@ class ContactForm extends Component {
 			email: '',
 			message: '',
 		};
+		this.send = this.send.bind(this);
 		this.handleChange = this.handleChange.bind(this);
 	}
+
+	send() {
+		fetch('/contact', {
+			method: 'POST',
+			headers: {
+				'Content-Type': 'application/json; charset=utf-8',
+			},
+			body: JSON.stringify({
+				subject: this.state.subject,
+				email: this.state.email,
+				message: this.state.message
+			})
+		})
+			.then(res => res.json())
+			.then(res => console.log(res));
+	}
+
 	handleChange(e, type) {
 		type === 'subject' && this.setState({ subject: e.target.value });
 		type === 'email' && this.setState({ email: e.target.value });
 		type === 'message' && this.setState({ message: e.target.value });
 	}
+
 	render() {
 		return(
 			<form>
@@ -39,17 +58,9 @@ class ContactForm extends Component {
 						value={this.state.message}
 						onChange={(e) => this.handleChange(e, 'message')}
 					/>
-					<a
-						href={'mailto:contact@starterhacks.ca?subject='
-						 			+ this.state.subject
-									+ '&cc='
-									+ this.state.email
-									+ '&body='
-									+ this.state.message}>
-						<button type='button' className='btn'>
-							<h4>{ResourceStrings.send.toUpperCase()}</h4>
-						</button>
-					</a>
+					<button type='button' className='btn' onClick={this.send}>
+						<h4>{ResourceStrings.send.toUpperCase()}</h4>
+					</button>
 				</FormGroup>
 			</form>
 		);

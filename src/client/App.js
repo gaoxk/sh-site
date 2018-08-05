@@ -17,11 +17,6 @@ import HackerStories from './components/HackerStories/HackerStories';
 import gain from './assets/Gain.png';
 
 class App extends Component {
-	componentDidMount() {
-		fetch('/hello/world')
-			.then(res => res.json())
-			.then(res => console.log(res));
-	}
 	render() {
 		return (
 			<div className='App'>
