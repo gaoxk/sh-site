@@ -18,7 +18,7 @@ app.post('/contact', (req, res) => {
 		host: 'imap.starterhacks.ca',
   	auth: {
   		user: 'contact@starterhacks.ca',
-  		pass: '@Milesteller2018'
+  		pass: 'sdfsdfs'
   	}
 	};
 
