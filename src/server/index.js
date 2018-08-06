@@ -17,10 +17,10 @@ const validateEmail = email => {
 
 // Routes
 app.post('/news', (req, res) => {
-	if(validateEmail(req.body.email)) {
+	if(!validateEmail(req.body.email)) {
 		return res.send('Invalid Email');
 	}
-	
+
 	const apiKey = 'hi there';
 	const listId = 'i used to always upload my api keys to git hub oops lmao';
 	const serverInstance = 'us15';
@@ -45,8 +45,9 @@ app.post('/news', (req, res) => {
 });
 
 app.post('/contact', (req, res) => {
-	if(validateEmail(req.body.email)) {
-		return res.send('Invalid Email');
+	if(!validateEmail(req.body.email)) {
+		console.log('Invalid Email, ' + req.body.email);
+		return res.send('Invalid Email, ' + req.body.email);
 	}
 
 	const transportConfig = {
