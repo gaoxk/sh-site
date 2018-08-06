@@ -5,12 +5,14 @@ import ResourceStrings from './../ResourceStrings';
 
 const Sponsor = props => (
 	<div className='sponsor container-fluid' id='sponsor'>
-		<h1>{props.title}</h1>
-		<p>{ResourceStrings.sponsor_soon.toUpperCase()}</p>
+		<div classNamme='sponsor-text'>
+			<h1>{props.title}</h1>
+			<p>{ResourceStrings.sponsor_soon.toUpperCase()}</p>
+		</div>
 	</div>
 );
 
-Sponsor.propTypes ={
+Sponsor.propTypes = {
 	title: PropTypes.string.isRequired
 };
 
