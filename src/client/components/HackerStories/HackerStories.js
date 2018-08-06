@@ -4,6 +4,12 @@ import CarouselItem from './CarouselItem';
 import CarouselItemlGrey from './CarouselItemGrey';
 import CarouselBar from './CarouselBar';
 
+import Ariane from './assets/Ariane.png';
+import Kalil from './assets/Kalil.png';
+import Kritin from './assets/Kritin.png';
+import Nicolas from './assets/Nicolas.png';
+import Stephanie from './assets/Stephanie.png';
+
 class HackerStories extends Component {
 	constructor (props) {
 		super(props);
@@ -118,12 +124,14 @@ class HackerStories extends Component {
 
 	render() {
 		let display = [];
+		let pics = [Kritin, Stephanie, Kalil, Ariane, Nicolas];
 		for(let i = 0; i < 3; i++){
 			display.push(
 				<CarouselItem
 					style={this.state}
 					title={ResourceStrings.hs_name[i]}
 					sub={ResourceStrings.hs_sub[i]}
+					pic={pics[i]}
 					body={ResourceStrings.hs_body[i]}
 				/>
 			);

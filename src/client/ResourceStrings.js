@@ -27,23 +27,23 @@ const ResourceStrings = {
 	],
 	hacker_stories: 'Hacker Stories',
 	hs_body: [
+		'We spent one half of a day figuring out how to start building our product when the other teams were already half-way up there. We saw light coming our way when we were able to get the foundations ready. The spirit to win kept us alive till late in the night and we kept striding towards the final product. By the end, winning or losing didn’t matter. Having fun, and delivering our product with maximal enthusiasm was more significant to any of us than winning.',
 		'It was all thanks to my first StarterHacks event that I found a community I felt like I really belonged to in Waterloo. I made amazing friends and met mentors who made a big impact on me beyond the event. It really was an experience like no other.',
 		'StarterHacks proved to me that I could have an amazing hackathon experience without having a lot of hacking experience! StarterHacks was a great opportunity to get introduced to hackathons in a comfortable and helpful environment!',
-		'We spent one half of a day figuring out how to start building our product when the other teams were already half-way up there. We saw light coming our way when we were able to get the foundations ready. The spirit to win kept us alive till late in the night and we kept striding towards the final product. By the end, winning or losing didn’t matter. Having fun, and delivering our product with maximal enthusiasm was more significant to any of us than winning.',
 		'Starterhacks was my first hackathon ever. You learn how to cooperate with people well in a team and understand the importance of teamwork. Winning Best Domain is a milestone. I vividly remember constantly brainstorming ideas with my group, dedicating time to our pitch... getting the award felt like a major accomplishment, as the hard work paid off. I feel like it just goes to show that even if you’re a first time hacker who might have little/no experience in their field, there will definitely be something to gain from the Hackathon. It was definitely life changing in relation to my design career! ',
 		'I really enjoyed being in a collaborative environment, sharing ideas with peers and pushing each other to the next level of creativity and innovation. At StarterHacks I learned that hackathons are not just about coding, but are also about design, prototyping, business, and creativity.'
 	],
 	hs_name: [
+		'Kritin Singhal',
 		'Kalil Sergio Matoto',
 		'Stephanie Musing',
-		'Kritin Singhal',
 		'Ariane Compton',
 		'Nicolas Franklin'
 	],
 	hs_sub: [
+		'Developer, Computer Science',
 		'Global Business and Digital Arts',
 		'Designer, Management Engineering',
-		'Developer, Computer Science',
 		'Designer. Global Business and Digital Arts',
 		'Designer, Civil Engineering'
 	],

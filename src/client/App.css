@@ -279,6 +279,21 @@ button:hover {
   white-space: nowrap;
 }
 
+.carousel-item-img img{
+  max-width: 50%;
+  max-height: 100%;
+  overflow: visible;
+  float: left;
+  border-radius: 15px;
+}
+
+.carousel-item-text {
+  max-width: 50%;
+  float: right;
+  padding: 3%;
+  white-space: normal;
+}
+
 .carousel-item #sub {
   color: grey;
 }
@@ -297,19 +312,6 @@ button:hover {
   outline: none;
   background-color: transparent;
   display: inline-block;
-}
-
-.carousel-item-img {
-  max-width: 50%;
-  overflow: hidden;
-  float: left;
-}
-
-.carousel-item-text {
-  max-width: 50%;
-  float: right;
-  padding: 3%;
-  white-space: normal;
 }
 
 @media (max-width: 768px) {

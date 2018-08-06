@@ -6,7 +6,7 @@ import photo from './../../assets/square_photo.PNG';
 const CarouselItem = props => (
 	<div className={'carousel-item ' + props.className} style={props.style}>
 		<span className='carousel-item-img'>
-			<img src={photo} alt='hacker'/>
+			<img src={props.pic} alt='hacker'/>
 		</span>
 		<span className='carousel-item-text' >
 			<h3>{props.title+','}<div id='sub'>{props.sub}</div></h3>
