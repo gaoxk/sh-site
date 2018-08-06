@@ -131,7 +131,8 @@ button:hover {
     margin-top: 5%;
   }
   .hero img {
-    width: 100%;
+    width: 80%;
+    transform: translateX(30%);
   }
 }
 
@@ -164,15 +165,6 @@ button:hover {
   position: absolute;
   width: 100%;
   right: 0;
-}
-
-@media (max-width: 768px) {
-  .how-it-works {
-    height: 100vh;
-  }
-  .how-it-works img {
-    margin-top: 5%;
-  }
 }
 
 .how-it-works .nope{
@@ -214,19 +206,34 @@ button:hover {
   border: 1px solid #e0e0e0;
   border-radius: 10px;
   background-color: #e0e0e0;
-  width: 45%;
+}
+
+@media (max-width: 426px) {
+  .how-it-works {
+    height: 80vh;
+  }
+  .how-it-works img {
+    width: 100% !important;
+  }
 }
 
 @media (max-width: 768px) {
+  .how-it-works {
+    max-height: 300vh;
+    display: flex;
+    flex-direction: column-reverse;
+  }
   .how-it-works-text {
+    margin-top: 0;
     transform: translateX(3%);
   }
   .how-it-works-row {
-    width: 100%;
-    margin-bottom: 2%;
+    width: 99%;
   }
   .how-it-works img {
     position: absolute !important;
+    transform: translateY(-100%);
+    width: 80%;
   }
 }
 
