@@ -106,7 +106,7 @@ class HackerStories extends Component {
 					newLTR = false;
 					newRTL = true;
 					newTrans-=107;
-				} else if (cond2(event) && newTrans < 107*3) {
+				} else if (cond2(event) && newTrans < 107*5) {
 					newLTR = true;
 					newRTL = false;
 					newTrans+=107;
@@ -125,7 +125,7 @@ class HackerStories extends Component {
 	render() {
 		let display = [];
 		let pics = [Kritin, Stephanie, Kalil, Ariane, Nicolas];
-		for(let i = 0; i < 3; i++){
+		for(let i = 0; i < 5; i++){
 			display.push(
 				<CarouselItem
 					style={this.state}
