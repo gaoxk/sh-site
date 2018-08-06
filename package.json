@@ -12,7 +12,8 @@
     "react-bootstrap": "^0.32.1",
     "react-dom": "^16.4.1",
     "react-scripts": "1.1.4",
-    "react-scrollchor": "^6.0.0"
+    "react-scrollchor": "^6.0.0",
+    "superagent": "^3.8.3"
   },
   "scripts": {
     "start": "webpack-dev-server --mode development --devtool inline-source-map --hot",

@@ -1,5 +1,6 @@
 const express = require('express');
 const nodemailer = require('nodemailer');
+const request = require('superagent');
 const bodyParser = require('body-parser');
 
 const app = express();
@@ -11,7 +12,27 @@ app.use(express.static('dist'));
 
 // Routes
 app.post('/news', (req, res) => {
-	res.send('hi there');
+	const apiKey = 'hi there';
+	const listId = 'i used to always upload my api keys to git hub oops lmao';
+	const serverInstance = 'us15';
+	request
+		.post('https://' + serverInstance + '.api.mailchimp.com/3.0/lists/' + listId + '/members/')
+		.set('Content-Type', 'application/json;charset=utf-8')
+		.set('Authorization', 'Basic ' + new Buffer('any:' + apiKey ).toString('base64'))
+		.send({
+			'email_address': req.body.email,
+			'status': 'subscribed'
+		})
+		.end((err, response) => {
+			if (response.status < 300 ||
+				 (response.status === 400 && response.body.title === 'Member Exists')) {
+				console.log('Signed Up!');
+				res.send('Signed Up!');
+			} else {
+				console.log('Sign Up Failed :(');
+				res.send('Sign Up Failed :(');
+			}
+		});
 	console.log(req.body);
 });
 
