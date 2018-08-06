@@ -10,28 +10,26 @@ app.use(bodyParser.urlencoded({ extended: true }));
 app.use(express.static('dist'));
 
 app.post('/contact', (req, res) => {
-	console.log('can anyone hear me?');
-
 	console.log(req.body);
 
 	const transportConfig = {
-		host: 'pop.dreamhost.com',
+		host: 'imap.dreamhost.com',
   	auth: {
   		user: 'contact@starterhacks.ca',
-  		pass: 'PHEW LAD'
+  		pass: 'heyo girl'
   	}
 	};
 
-	const sendEmail = {
-  	from: 'contact@starterhacks.ca',
+	const youveGotMail = {
+  	from: req.body.email,
   	to: 'contact@starterhacks.ca',
-  	subject: req.subject,
-  	text: req.message
+  	subject: req.body.subject,
+  	text: req.body.message
 	};
 
 	const transporter = nodemailer.createTransport(transportConfig);
 
-	transporter.sendMail(sendEmail, (error, info) => {
+	transporter.sendMail(youveGotMail, (error, info) => {
   	if (error) {
   		console.log(error);
   	} else {
