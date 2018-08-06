@@ -9,6 +9,12 @@ app.use(bodyParser.urlencoded({ extended: true }));
 
 app.use(express.static('dist'));
 
+// Routes
+app.post('/news', (req, res) => {
+	res.send('hi there');
+	console.log(req.body);
+});
+
 app.post('/contact', (req, res) => {
 	console.log(req.body);
 
@@ -31,9 +37,9 @@ app.post('/contact', (req, res) => {
 
 	transporter.sendMail(youveGotMail, (error, info) => {
   	if (error) {
-  		console.log(error);
+  		res.send(error);
   	} else {
-  		console.log('Email sent: ' + info.response);
+  	  res.send('Email sent: ' + info.response);
   	}
 	});
 });

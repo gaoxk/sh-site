@@ -10,6 +10,19 @@ class NewsLetter extends Component {
 			news: ''
 		};
 		this.handleChange = this.handleChange.bind(this);
+		this.send = this.send.bind(this);
+	}
+
+	send() {
+		fetch('/news', {
+			method: 'POST',
+			headers: {
+				'Content-Type': 'application/json; charset=utf-8',
+			},
+			body: JSON.stringify({email: this.state.news})
+		})
+			.then(res => res.json())
+			.then(res => console.log(res));
 	}
 
 	handleChange(e) {
@@ -38,7 +51,7 @@ class NewsLetter extends Component {
       			value={this.state.news}
       			onChange={(e) => this.handleChange(e)}
       		/>
-      		<button  type='submit' name='subscribe' className='btn'>
+      		<button  type='submit' name='subscribe' className='btn' onClick={this.send}>
       			<h4>{ResourceStrings.subscribe.toUpperCase()}</h4>
       		</button>
       	</FormGroup>
