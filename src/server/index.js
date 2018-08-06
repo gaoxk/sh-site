@@ -10,8 +10,17 @@ app.use(bodyParser.urlencoded({ extended: true }));
 
 app.use(express.static('dist'));
 
+const validateEmail = email => {
+ 	let re = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+	return re.test(email);
+};
+
 // Routes
 app.post('/news', (req, res) => {
+	if(validateEmail(req.body.email)) {
+		return res.send('Invalid Email');
+	}
+	
 	const apiKey = 'hi there';
 	const listId = 'i used to always upload my api keys to git hub oops lmao';
 	const serverInstance = 'us15';
@@ -33,11 +42,12 @@ app.post('/news', (req, res) => {
 				res.send('Sign Up Failed :(');
 			}
 		});
-	console.log(req.body);
 });
 
 app.post('/contact', (req, res) => {
-	console.log(req.body);
+	if(validateEmail(req.body.email)) {
+		return res.send('Invalid Email');
+	}
 
 	const transportConfig = {
 		host: 'imap.dreamhost.com',
