@@ -117,14 +117,23 @@ class HackerStories extends Component {
 	}
 
 	render() {
+		let display = [];
+		for(let i = 0; i < 3; i++){
+			display.push(
+				<CarouselItem
+					style={this.state}
+					title={ResourceStrings.hs_name[i]}
+					sub={ResourceStrings.hs_sub[i]}
+					body={ResourceStrings.hs_body[i]}
+				/>
+			);
+		}
 		return (
 			<div className='hacker-stories container' id='hacker-stories'>
 				<h1>{ResourceStrings.hacker_stories}</h1>
 				{/*	{this.state.arr}*/}
 				<CarouselItemlGrey style={this.state} />
-				<CarouselItem style={this.state} title='11111'/>
-				<CarouselItem style={this.state} title='22222'/>
-				<CarouselItem style={this.state} title='33333'/>
+				{display}
 				<CarouselItemlGrey style={this.state} />
 				<CarouselBar/>
 			</div>

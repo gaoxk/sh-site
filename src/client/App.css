@@ -277,7 +277,10 @@ button:hover {
   transition: transform 2s ease;
   margin-right: 5%;
   white-space: nowrap;
+}
 
+.carousel-item #sub {
+  color: grey;
 }
 
 .carousel-item-grey {
