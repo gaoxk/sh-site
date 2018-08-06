@@ -15,10 +15,10 @@ app.post('/contact', (req, res) => {
 	console.log(req.body);
 
 	const transportConfig = {
-		host: 'imap.starterhacks.ca',
+		host: 'pop.dreamhost.com',
   	auth: {
   		user: 'contact@starterhacks.ca',
-  		pass: 'sdfsdfs'
+  		pass: 'PHEW LAD'
   	}
 	};
 
@@ -30,14 +30,6 @@ app.post('/contact', (req, res) => {
 	};
 
 	const transporter = nodemailer.createTransport(transportConfig);
-
-	transporter.verify( (error, success) => {
-		if (error) {
-			console.log(error);
-		} else {
-			console.log('Server is ready to take our messages');
-		}
-	});
 
 	transporter.sendMail(sendEmail, (error, info) => {
   	if (error) {
