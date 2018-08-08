@@ -1,9 +1,9 @@
 import React, { Component } from 'react';
-import {Nav, Navbar, NavItem} from 'react-bootstrap';
-import ScrollchorItem from './ScrollchorItem';
+import { Nav, Navbar, NavItem } from 'react-bootstrap';
+import { Link } from 'react-scroll';
 
-import ResourceStrings from './../../ResourceStrings';
-import logo from './../../assets/logo.png';
+import ResourceStrings from './../ResourceStrings';
+import logo from './../assets/logo.png';
 
 class NavComponent extends Component {
 	constructor (props) {
@@ -80,37 +80,37 @@ class NavComponent extends Component {
 		return (
 			<Navbar fixedTop {... this.state}>
 				<Navbar.Header>
-					<ScrollchorItem to='#hero' className="nav-link">
+					<Link smooth={true} to='hero' className="nav-link">
 						<Navbar.Brand>
 	          	<img src={logo} alt='starterhacks logo'/>
 						</Navbar.Brand>
-					</ScrollchorItem>
+					</Link>
       	</Navbar.Header>
       	<Nav pullRight>
 					<NavItem eventKey={1}>
-						<ScrollchorItem to='#about'>
+						<Link smooth={true} to='description-about'>
 							<p>{ResourceStrings.about}</p>
-						</ScrollchorItem>
+						</Link>
 					</NavItem>
 					<NavItem eventKey={2}>
-						<ScrollchorItem to='#hacker-stories'>
+						<Link smooth={true} to='hacker-stories'>
 							<p>{ResourceStrings.hacker_stories}</p>
-						</ScrollchorItem>
+						</Link>
 					</NavItem>
 					<NavItem eventKey={3}>
-						<ScrollchorItem to='#sponsor'>
+						<Link smooth={true} to='sponsors'>
 							<p>{ResourceStrings.sponsors}</p>
-						</ScrollchorItem>
+						</Link>
 					</NavItem>
 					<NavItem eventKey={4}>
-						<ScrollchorItem to='#faq'>
+						<Link smooth={true} to='faq'>
 							<p>{ResourceStrings.faq.toUpperCase()}</p>
-						</ScrollchorItem>
+						</Link>
 					</NavItem>
 					<NavItem eventKey={5}>
-						<ScrollchorItem to='#contact'>
+						<Link smooth={true} to='contact'>
 							<p>{ResourceStrings.contact}</p>
-						</ScrollchorItem>
+						</Link>
 					</NavItem>
     		</Nav>
 	  	</Navbar>

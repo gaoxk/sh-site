@@ -2,13 +2,13 @@ import React, { Component } from 'react';
 import './App.css';
 import ResourceStrings from './ResourceStrings';
 
-import NavComponent from './components/Navigation/NavComponent';
+import NavComponent from './components/NavComponent';
 import Hero from './components/Hero';
 import Description from './components/Description/Description';
 import { Gain, Learn} from './components/Description/Descriptions';
 import HowItWorks from './components/HowItWorks';
 import Stream from './components/Stream';
-import Faq from './components/Faq';
+import Faq from './components/Faq/Faq';
 import Sponsor from './components/Sponsor';
 import Contact from './components/Contact/Contact';
 import Footer from './components/Footer';

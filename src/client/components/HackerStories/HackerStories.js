@@ -4,6 +4,9 @@ import CarouselItem from './CarouselItem';
 import CarouselItemlGrey from './CarouselItemGrey';
 import CarouselBar from './CarouselBar';
 
+
+import { Element } from 'react-scroll';
+
 import Ariane from './assets/Ariane.png';
 import Kalil from './assets/Kalil.png';
 import Kritin from './assets/Kritin.png';
@@ -137,14 +140,16 @@ class HackerStories extends Component {
 			);
 		}
 		return (
-			<div className='hacker-stories container' id='hacker-stories'>
-				<h1>{ResourceStrings.hacker_stories}</h1>
-				{/*	{this.state.arr}*/}
-				<CarouselItemlGrey style={this.state} />
-				{display}
-				<CarouselItemlGrey style={this.state} />
-				<CarouselBar/>
-			</div>
+			<Element name='hacker-stories'>
+				<div className='hacker-stories container' id='hacker-stories'>
+					<h1>{ResourceStrings.hacker_stories}</h1>
+					{/*	{this.state.arr}*/}
+					<CarouselItemlGrey style={this.state} />
+					{display}
+					<CarouselItemlGrey style={this.state} />
+					<CarouselBar/>
+				</div>
+			</Element>
 		);
 	}
 }

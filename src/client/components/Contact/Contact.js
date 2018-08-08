@@ -1,4 +1,6 @@
 import React, { Component } from 'react';
+import { Element } from 'react-scroll';
+
 import ResourceStrings from './../../ResourceStrings';
 
 import ContactForm from './ContactForm';
@@ -21,22 +23,24 @@ class Contact extends Component {
 	}
 	render() {
 		return (
-			<div className='contact' id='contact'>
-				<div className='container'>
-					<h1>{ResourceStrings.contact}</h1>
-					<div className='row' >
-						<div className='col-md-6'>
-							<ContactForm/>
-						</div>
-						<div className='col-md-6 newsletter'>
-							<NewsLetter
-								header={true}
-								placeholder={ResourceStrings.sign_up_email}
-							/>
+			<Element name='contact'>
+				<div className='contact' id='contact'>
+					<div className='container'>
+						<h1>{ResourceStrings.contact}</h1>
+						<div className='row' >
+							<div className='col-md-6'>
+								<ContactForm/>
+							</div>
+							<div className='col-md-6 newsletter'>
+								<NewsLetter
+									header={true}
+									placeholder={ResourceStrings.sign_up_email}
+								/>
+							</div>
 						</div>
 					</div>
 				</div>
-			</div>
+			</Element>
 		);
 	}
 }
