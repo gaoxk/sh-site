@@ -1,6 +1,6 @@
 import React from 'react';
-import { Element } from 'react-scroll';
 import PropTypes from 'prop-types';
+import { Element } from 'react-scroll';
 
 import ResourceStrings from './../ResourceStrings';
 

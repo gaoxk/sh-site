@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import {FormGroup, FormControl} from 'react-bootstrap';
+
 import ResourceStrings from './../../ResourceStrings';
 
 class NewsLetter extends Component {

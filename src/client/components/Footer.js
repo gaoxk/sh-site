@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 
 import ResourceStrings from './../ResourceStrings';
-
 import tw from './../assets/twitter.svg';
 import ig from './../assets/instagram.svg';
 import fb from './../assets/facebook.svg';

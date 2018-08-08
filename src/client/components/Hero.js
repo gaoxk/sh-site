@@ -1,7 +1,7 @@
 import React from 'react';
 import { Element } from 'react-scroll';
-import ResourceStrings from './../ResourceStrings';
 
+import ResourceStrings from './../ResourceStrings';
 import NewsLetter from './Contact/NewsLetter';
 import hero from './../assets/Hero.png';
 

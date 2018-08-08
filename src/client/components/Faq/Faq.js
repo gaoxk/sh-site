@@ -3,7 +3,6 @@ import { Element } from 'react-scroll';
 
 import ResourceStrings from './../../ResourceStrings';
 import Question from './Question';
-
 import faq_img from './../../assets/FAQ.png';
 
 class Faq extends Component {

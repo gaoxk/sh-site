@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 import { Element } from 'react-scroll';
 
 import ResourceStrings from './../../ResourceStrings';
-
 import ContactForm from './ContactForm';
 import NewsLetter from './NewsLetter';
 

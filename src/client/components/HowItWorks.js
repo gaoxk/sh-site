@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
-import ResourceStrings from './../ResourceStrings';
 
+import ResourceStrings from './../ResourceStrings';
 import plan from './../assets/Plan.png';
 import proto from './../assets/Prototype.png';
 import present from './../assets/Present.png';

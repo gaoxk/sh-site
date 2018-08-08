@@ -1,4 +1,5 @@
 import React from 'react';
+
 import ResourceStrings from './../ResourceStrings';
 import streamPhoto from './../assets/stream_photo.PNG';
 

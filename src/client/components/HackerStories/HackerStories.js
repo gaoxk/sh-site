@@ -1,11 +1,11 @@
 import React, { Component } from 'react';
+import { Element } from 'react-scroll';
+
 import ResourceStrings from './../../ResourceStrings';
+
 import CarouselItem from './CarouselItem';
 import CarouselItemlGrey from './CarouselItemGrey';
 import CarouselBar from './CarouselBar';
-
-
-import { Element } from 'react-scroll';
 
 import Ariane from './assets/Ariane.png';
 import Kalil from './assets/Kalil.png';

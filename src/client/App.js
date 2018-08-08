@@ -5,7 +5,7 @@ import ResourceStrings from './ResourceStrings';
 import NavComponent from './components/NavComponent';
 import Hero from './components/Hero';
 import Description from './components/Description/Description';
-import { Gain, Learn} from './components/Description/Descriptions';
+import { Gain, Learn } from './components/Description/Descriptions';
 import HowItWorks from './components/HowItWorks';
 import Stream from './components/Stream';
 import Faq from './components/Faq/Faq';
