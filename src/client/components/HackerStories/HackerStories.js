@@ -5,8 +5,6 @@ import shuffle from 'lodash/shuffle';
 import ResourceStrings from './../../ResourceStrings';
 
 import CarouselItem from './CarouselItem';
-import CarouselItemlGrey from './CarouselItemGrey';
-import CarouselBar from './CarouselBar';
 
 import Ariane from './assets/Ariane.png';
 import Kalil from './assets/Kalil.png';
@@ -17,13 +15,15 @@ import Stephanie from './assets/Stephanie.png';
 class HackerStories extends Component {
 	constructor (props) {
 		super(props);
+		const mixer = shuffle([0, 1, 2, 3, 4]);
 		this.state = {
 			toggle: false,
 			trans: 107,
-			transform: 'translateX(-107%)',
+			transform: 'translateX(0)',
 			ltr: true,
 			rtl: false,
 			opacity: 0.5,
+			mixer: mixer
 		/* timer: setInterval(
 				() => {this.animate(() => true, () => true, true);},
 				3000) */
@@ -89,12 +89,11 @@ class HackerStories extends Component {
 					newLTR = false;
 					newRTL = true;
 					newTrans-=107;
-				} else if (cond2(event) && newTrans < 107*5) {
+				} else if (cond2(event) && newTrans < 107*4) {
 					newLTR = true;
 					newRTL = false;
 					newTrans+=107;
 				}
-
 				return({
 					trans: newTrans,
 					transform: 'translateX(-'+ newTrans + '%)',
@@ -106,7 +105,8 @@ class HackerStories extends Component {
 	}
 
 	render() {
-	  const mixer = shuffle([0, 1, 2, 3, 4]);
+		if(window.innerWidth < 1024) return(<div></div>);
+		const { mixer } = this.state;
 		let display = [];
 		const pics = [Kritin, Stephanie, Kalil, Ariane, Nicolas];
 		for(let i = 0; i < 5; i++) {
@@ -124,10 +124,7 @@ class HackerStories extends Component {
 			<Element name='hacker-stories'>
 				<div className='hacker-stories container' id='hacker-stories'>
 					<h1>{ResourceStrings.hacker_stories}</h1>
-					<CarouselItemlGrey style={this.state} />
 					{display}
-					<CarouselItemlGrey style={this.state} />
-					<CarouselBar/>
 				</div>
 			</Element>
 		);
