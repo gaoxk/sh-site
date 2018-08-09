@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { Element } from 'react-scroll';
+import shuffle from 'lodash/shuffle';
 
 import ResourceStrings from './../../ResourceStrings';
 
@@ -26,11 +27,6 @@ class HackerStories extends Component {
 		/* timer: setInterval(
 				() => {this.animate(() => true, () => true, true);},
 				3000) */
-			/*			arr: [
-				<CarouselItemComponent title='11111'/>,
-				<CarouselItemComponent title='22222'/>,
-				<CarouselItemComponent title='33333'/>
-			] */
 		};
 		this.onClick = this.onClick.bind(this);
 		this.onScroll = this.onScroll.bind(this);
@@ -42,22 +38,6 @@ class HackerStories extends Component {
 		window.addEventListener('scroll', this.onScroll, { passive: true });
 		window.addEventListener('keydown', this.onKeyDown, { passive: true });
 
-	/*	setInterval(
-			() => {
-				console.log('gemgdg');
-				this.setState(prevState => {
-					const hm1 = prevState.arr[0];
-					const hm2 = prevState.arr[1];
-					const hm3 = prevState.arr[2];
-					return {
-						arr: [
-							hm2,
-							hm1,
-							hm3
-						]
-					};
-				});
-			}, 3000); */
 	}
 
 	componentWillUnmount () {
@@ -126,16 +106,17 @@ class HackerStories extends Component {
 	}
 
 	render() {
+	  const mixer = shuffle([0, 1, 2, 3, 4]);
 		let display = [];
-		let pics = [Kritin, Stephanie, Kalil, Ariane, Nicolas];
-		for(let i = 0; i < 5; i++){
+		const pics = [Kritin, Stephanie, Kalil, Ariane, Nicolas];
+		for(let i = 0; i < 5; i++) {
 			display.push(
 				<CarouselItem
 					style={this.state}
-					title={ResourceStrings.hs_name[i]}
-					sub={ResourceStrings.hs_sub[i]}
-					pic={pics[i]}
-					body={ResourceStrings.hs_body[i]}
+					title={ResourceStrings.hs_name[mixer[i]]}
+					sub={ResourceStrings.hs_sub[mixer[i]]}
+					pic={pics[mixer[i]]}
+					body={ResourceStrings.hs_body[mixer[i]]}
 				/>
 			);
 		}
@@ -143,7 +124,6 @@ class HackerStories extends Component {
 			<Element name='hacker-stories'>
 				<div className='hacker-stories container' id='hacker-stories'>
 					<h1>{ResourceStrings.hacker_stories}</h1>
-					{/*	{this.state.arr}*/}
 					<CarouselItemlGrey style={this.state} />
 					{display}
 					<CarouselItemlGrey style={this.state} />
