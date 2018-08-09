@@ -7,10 +7,8 @@ import ResourceStrings from './../ResourceStrings';
 const Sponsor = props => (
 	<Element name='sponsors'>
 		<div className='sponsor container-fluid' id='sponsor'>
-			<div className='sponsor-text'>
-				<h1>{props.title}</h1>
-				<p>{ResourceStrings.sponsor_soon.toUpperCase()}</p>
-			</div>
+			<h1>{props.title}</h1>
+			<p>{ResourceStrings.sponsor_soon.toUpperCase()}</p>
 		</div>
 	</Element>
 );

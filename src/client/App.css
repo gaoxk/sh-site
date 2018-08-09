@@ -247,7 +247,6 @@ button:hover {
   }
 }
 
-
 @media (max-width: 1025px) {
   .how-it-works-text {
     margin-left: 10%;
@@ -401,11 +400,7 @@ button:hover {
   display: block;
   padding: 30px;
   text-align: center;
-}
-
-.sponsor-text {
-  display: block;
-  margin: 10px auto;
+  margin-bottom: 30px;
 }
 
 /* Contact */
