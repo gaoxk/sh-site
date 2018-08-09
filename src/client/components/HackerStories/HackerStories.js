@@ -85,7 +85,7 @@ class HackerStories extends Component {
 				let newTrans = prevState.trans;
 				let newLTR = prevState.ltr;
 				let newRTL = prevState.rlt;
-			  if (cond1(event) && newTrans > 107) {
+			  if (cond1(event) && newTrans > 0) {
 					newLTR = false;
 					newRTL = true;
 					newTrans-=107;
@@ -112,6 +112,7 @@ class HackerStories extends Component {
 		for(let i = 0; i < 5; i++) {
 			display.push(
 				<CarouselItem
+					key={i}
 					style={this.state}
 					title={ResourceStrings.hs_name[mixer[i]]}
 					sub={ResourceStrings.hs_sub[mixer[i]]}

@@ -44,7 +44,7 @@ const ResourceStrings = {
 		'Developer, Computer Science',
 		'Designer, Management Engineering',
 		'Global Business and Digital Arts',
-		'Designer. Global Business and Digital Arts',
+		'Designer, Global Business and Digital Arts',
 		'Designer, Civil Engineering'
 	],
 	how_it_works: 'How it works',
@@ -91,7 +91,7 @@ const ResourceStrings = {
 	send: 'Send',
 	sign_up: 'Sign Up',
 	sign_up_email : 'Enter your email address',
-	sign_up_news : 'Enter your email to sign up for our news letter',
+	sign_up_news : 'Enter your email to sign up for our newsletter',
 	subscribe: 'Subscribe',
 	sponsors: 'Sponsors',
 	sponsor_soon: 'Sponsor list coming soon!',

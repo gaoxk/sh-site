@@ -76,7 +76,21 @@ class NavComponent extends Component {
 	}
 
 	render() {
-		window.scroll({behaviour: 'smooth'});
+		let navs = [];
+		const titles = [ResourceStrings.about,	ResourceStrings.hacker_stories,
+			ResourceStrings.sponsors,	ResourceStrings.faq.toUpperCase(),
+			ResourceStrings.contact];
+		const locals = ['description-about', 'hacker-stories',
+			'sponsors', 'faq', 'contact'];
+		for(let i = 0; i < 5; i++) {
+			navs.push(
+				<NavItem eventKey={i+1} key={i}>
+					<Link smooth={true} to={locals[i]}>
+						<p>{titles[i]}</p>
+					</Link>
+				</NavItem>
+			);
+		}
 		return (
 			<Navbar fixedTop {... this.state}>
 				<Navbar.Header>
@@ -87,31 +101,7 @@ class NavComponent extends Component {
 					</Link>
       	</Navbar.Header>
       	<Nav pullRight>
-					<NavItem eventKey={1}>
-						<Link smooth={true} to='description-about'>
-							<p>{ResourceStrings.about}</p>
-						</Link>
-					</NavItem>
-					<NavItem eventKey={2}>
-						<Link smooth={true} to='hacker-stories'>
-							<p>{ResourceStrings.hacker_stories}</p>
-						</Link>
-					</NavItem>
-					<NavItem eventKey={3}>
-						<Link smooth={true} to='sponsors'>
-							<p>{ResourceStrings.sponsors}</p>
-						</Link>
-					</NavItem>
-					<NavItem eventKey={4}>
-						<Link smooth={true} to='faq'>
-							<p>{ResourceStrings.faq.toUpperCase()}</p>
-						</Link>
-					</NavItem>
-					<NavItem eventKey={5}>
-						<Link smooth={true} to='contact'>
-							<p>{ResourceStrings.contact}</p>
-						</Link>
-					</NavItem>
+					{navs}
     		</Nav>
 	  	</Navbar>
 		);
