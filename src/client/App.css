@@ -19,13 +19,17 @@ h1 {
   font-weight: 0;
 }
 
+h3 {
+  font-size: 1.25em;
+}
+
 a {
   color: inherit !important;
   text-decoration: none !important;
 }
 
 p, li {
-  font-size: 1.25em;
+  font-size: 1em;
 }
 
 .break {
@@ -99,6 +103,11 @@ button:hover {
 
 .hero-text, .description-text {
   margin-top: 25%;
+}
+
+#hero-sub {
+  font-size: 0.8em;
+  color: grey;
 }
 
 .hero h3 {
@@ -212,7 +221,7 @@ button:hover {
 }
 
 .how-it-works-row {
-  margin-top: 3%;
+  margin-top: 7%;
   border: 1px solid #e0e0e0;
   border-radius: 10px;
   background-color: #e0e0e0;
@@ -304,7 +313,7 @@ button:hover {
 }
 
 .carousel-item-img img{
-  max-width: 50%;
+  max-width: 55%;
   max-height: 100%;
   overflow: visible;
   float: left;
@@ -312,9 +321,10 @@ button:hover {
 }
 
 .carousel-item-text {
-  max-width: 50%;
+  max-width: 45%;
   float: right;
-  padding: 3%;
+  padding: 0%;
+  padding-right: 2%;
   white-space: normal;
 }
 
@@ -346,13 +356,14 @@ button:hover {
 
 /* FAQ */
 .faq {
-  overflow: hidden;
+  overflow: visible;
 }
 
 .accordion {
   margin-top: 2%;
   cursor: pointer;
-  padding: 2%;
+  padding: 0.01%;
+  padding-left: 2%;
   width: 100%;
   border-radius: 7px;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);

@@ -12,7 +12,7 @@ const Hero = () => (
 			<div className='container'>
 				<div className='hero-text'>
 					<h1>{ResourceStrings.starterhacks}</h1>
-					<p>{ResourceStrings.starterhacks_date.toUpperCase()}</p>
+					<p id='hero-sub'>{ResourceStrings.starterhacks_date.toUpperCase()}</p>
 					<h3>{ResourceStrings.starterhacks_header}</h3>
 					<NewsLetter
 						header={false}

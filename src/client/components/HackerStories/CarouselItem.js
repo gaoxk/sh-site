@@ -9,8 +9,8 @@ const CarouselItem = props => (
 			<img src={props.pic} alt='hacker'/>
 		</span>
 		<span className='carousel-item-text' >
-			<h3>{props.title+','}<div id='sub'>{props.sub}</div></h3>
-			<p>{props.body}</p>
+			<h3>{props.title}<div id='sub'>{props.sub}</div></h3>
+			<p>{'\"' + props.body + '\"'}</p>
 		</span>
 	</div>
 );

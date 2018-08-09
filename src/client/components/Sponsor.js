@@ -8,7 +8,7 @@ const Sponsor = props => (
 	<Element name='sponsors'>
 		<div className='sponsor container-fluid' id='sponsor'>
 			<h1>{props.title}</h1>
-			<p>{ResourceStrings.sponsor_soon.toUpperCase()}</p>
+			<h3>{ResourceStrings.sponsor_soon.toUpperCase()}</h3>
 		</div>
 	</Element>
 );

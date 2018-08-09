@@ -22,7 +22,7 @@ class Question extends Component {
 		return (
 			<div>
 				<div className="accordion" onClick={this.clicker}>
-					<p>{this.props.question}</p>
+					<h3>{this.props.question}</h3>
 				</div>
 				<div className="answer animated fadeIn" style={this.state}>
 					<p>{this.props.answer}</p>
