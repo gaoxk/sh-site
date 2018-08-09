@@ -15,6 +15,7 @@ import Footer from './components/Footer';
 import HackerStories from './components/HackerStories/HackerStories';
 
 import gain from './assets/Gain.png';
+import learn from './assets/Learn.png';
 
 class App extends Component {
 	render() {
@@ -32,7 +33,8 @@ class App extends Component {
 				<Description
 					title={ResourceStrings.description_learn}
 					bod={Learn()}
-					imger={gain}
+					imger={learn}
+					id='learn'
 				/>
 				<Stream/>
 				<HackerStories/>
