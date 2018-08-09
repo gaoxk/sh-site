@@ -106,7 +106,6 @@ const ResourceStrings = {
 	stream_design_desc: 'Expand your skills in a full range of design areas including user experience, graphic and brand design.',
 	stream_dev: 'Development',
 	stream_dev_desc: 'Experiment with multiple APIs, hardware and new coding languages.',
-	stream_follow: 'Create solutions for a problem that you are itching to solve in StarterHacks 2019!'
 };
 
 export default ResourceStrings;

@@ -28,7 +28,6 @@ const Stream = () => (
 					<p>{ResourceStrings.stream_bussiness_desc}</p>
 				</div>
 			</div>
-			<h2>{ResourceStrings.stream_follow}</h2>
 		</div>
 	</div>
 );

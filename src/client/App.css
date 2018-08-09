@@ -37,7 +37,7 @@ p, li {
 
 button {
   border: 1px solid;
-  margin-top: 2%;
+  margin-top: 4%;
   border-radius: 100px !important;
   color: white;
   width: 33%;
@@ -57,6 +57,22 @@ button:hover {
   }
 }
 
+.fadeInDown {
+  -webkit-animation: fadeInDown 0.25s; /* Safari 4+ */
+  -moz-animation:    fadeInDown 0.25s; /* Fx 5+ */
+  -o-animation:      fadeInDown 0.25s; /* Opera 12+ */
+  animation:         fadeInDown 0.25s; /* IE 10+, Fx 29+ */
+  visibility: visible;
+}
+
+.fadeOutUp {
+  -webkit-animation: fadeOutUp 0.25s; /* Safari 4+ */
+  -moz-animation:    fadeOutUp 0.25s; /* Fx 5+ */
+  -o-animation:      fadeOutUp 0.25s; /* Opera 12+ */
+  animation:         fadeOutUp 0.25s; /* IE 10+, Fx 29+ */
+  visibility: hidden;
+}
+
 /* Nav bar */
 .navbar {
   background-color: white;
@@ -74,22 +90,6 @@ button:hover {
   }
 }
 
-.fadeInDown {
-  -webkit-animation: fadeInDown 0.25s; /* Safari 4+ */
-  -moz-animation:    fadeInDown 0.25s; /* Fx 5+ */
-  -o-animation:      fadeInDown 0.25s; /* Opera 12+ */
-  animation:         fadeInDown 0.25s; /* IE 10+, Fx 29+ */
-  visibility: visible;
-}
-
-.fadeOutUp {
-  -webkit-animation: fadeOutUp 0.25s; /* Safari 4+ */
-  -moz-animation:    fadeOutUp 0.25s; /* Fx 5+ */
-  -o-animation:      fadeOutUp 0.25s; /* Opera 12+ */
-  animation:         fadeOutUp 0.25s; /* IE 10+, Fx 29+ */
-  visibility: hidden;
-}
-
 /* Hero and Description*/
 .hero, .description, .stream, .hacker-stories, .how-it-works, .contact {
   height: 100vh;
@@ -101,10 +101,24 @@ button:hover {
   margin-top: 25%;
 }
 
+.hero h3 {
+  margin-top: 4%;
+  margin-bottom: 4%
+}
+
 .hero img {
   position: absolute;
   width: 50%;
   right: 0;
+}
+
+.hero button {
+  border-color: #3c56a5;
+  background-color: #3c56a5;
+}
+
+.hero button:hover {
+  color: #3c56a5;
 }
 
 .description {
@@ -136,12 +150,6 @@ button:hover {
   }
 }
 
-@media (max-width: 1025px) {
-  .hero-text, .description-text {
-    width: 80%;
-  }
-}
-
 @media (min-width: 1025px) {
   .hero-text, .description-text {
     width: 50%;
@@ -151,13 +159,15 @@ button:hover {
   }
 }
 
-.hero button {
-  border-color: #3c56a5;
-  background-color: #3c56a5;
-}
-
-.hero button:hover {
-  color: #3c56a5;
+@media (max-width: 1025px) {
+  .hero-text, .description-text {
+    margin-top: 22%;
+    max-width: 40%;
+  }
+  .hero img {
+    height: 100%;
+    width: auto;
+  }
 }
 
 /* How It Works */
@@ -237,6 +247,14 @@ button:hover {
   }
 }
 
+
+@media (max-width: 1025px) {
+  .how-it-works-text {
+    margin-left: 10%;
+    max-width: 80%;
+  }
+}
+
 @media (min-width: 1025px) {
   .how-it-works-text {
     transform: translateX(50%);
@@ -255,14 +273,14 @@ button:hover {
   margin-top: 10%;
 }
 
+.stream img {
+  width: 100%;
+}
+
 @media (max-width: 768px) {
   .stream h3, .stream p {
     margin-top: 0;
   }
-}
-
-.stream img {
-  width: 100%;
 }
 
 /* Hacker Stories*/
@@ -368,6 +386,12 @@ button:hover {
   .faq img {
     width: 100%;
     margin-top: 0;
+  }
+}
+
+@media (max-width: 1025px) {
+  .faq img {
+    margin-top: 15%;
   }
 }
 
