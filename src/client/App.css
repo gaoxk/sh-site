@@ -145,7 +145,6 @@ input::placeholder {
 
 .description {
   overflow: visible;
-  background-color: red;
 }
 
 .description img {
@@ -468,18 +467,27 @@ input::placeholder {
 }
 
 /* Contact */
-.contact{
+.contact {
   max-height: 90vh;
   background-color: #F6F6F6;
+  padding: 3%;
 }
 
 .contact label{
   margin-top: 2%;
 }
 
+.field {
+  margin-top: 2%;
+}
+
 .form-control {
   border-style: none;
   box-shadow: 0 0 5px 1px rgb(0, 0, 0, 0.1);
+}
+
+.textarea {
+  min-height: 25vh;
 }
 
 .newsletter {

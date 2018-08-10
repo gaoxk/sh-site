@@ -24,7 +24,7 @@ class Contact extends Component {
 		return (
 			<Element name='contact'>
 				<div className='contact' id='contact'>
-					<div className='container'>
+					<div className='contact-container container'>
 						<h1>{ResourceStrings.contact}</h1>
 						<div className='row' >
 							<div className='col-md-6'>

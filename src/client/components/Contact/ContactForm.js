@@ -40,24 +40,31 @@ class ContactForm extends Component {
 		return(
 			<form>
 				<FormGroup controlId='formBasicText'>
-					<ControlLabel><p>{ResourceStrings.contact_subject}</p></ControlLabel>
-					<FormControl
-						type='text'
-						value={this.state.subject}
-						onChange={(e) => this.handleChange(e, 'subject')}
-					/>
-					<ControlLabel><p>{ResourceStrings.contact_email}</p></ControlLabel>
-					<FormControl
-						type='text'
-						value={this.state.email}
-						onChange={(e) => this.handleChange(e, 'email')}
-					/>
-					<ControlLabel><p>{ResourceStrings.contact_message}</p></ControlLabel>
-					<FormControl
-						componentClass='textarea'
-						value={this.state.message}
-						onChange={(e) => this.handleChange(e, 'message')}
-					/>
+					<div className='field'>
+						<ControlLabel><p>{ResourceStrings.contact_subject}</p></ControlLabel>
+						<FormControl
+							type='text'
+							value={this.state.subject}
+							onChange={(e) => this.handleChange(e, 'subject')}
+						/>
+					</div>
+					<div className='field'>
+						<ControlLabel><p>{ResourceStrings.contact_email}</p></ControlLabel>
+						<FormControl
+							type='text'
+							value={this.state.email}
+							onChange={(e) => this.handleChange(e, 'email')}
+						/>
+					</div>
+					<div className='field'>
+						<ControlLabel><p>{ResourceStrings.contact_message}</p></ControlLabel>
+						<FormControl
+							className='textarea'
+							componentClass='textarea'
+							value={this.state.message}
+							onChange={(e) => this.handleChange(e, 'message')}
+						/>
+					</div>
 					<button type='button' className='btn' onClick={this.send}>
 						<h4>{ResourceStrings.send.toUpperCase()}</h4>
 					</button>
