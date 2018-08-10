@@ -124,8 +124,10 @@ class HackerStories extends Component {
 		return (
 			<Element name='hacker-stories'>
 				<div className='hacker-stories container' id='hacker-stories'>
-					<h1>{ResourceStrings.hacker_stories}</h1>
-					{display}
+					<div className='hacker-stories-content'>
+						<h1>{ResourceStrings.hacker_stories}</h1>
+						{display}
+					</div>
 				</div>
 			</Element>
 		);

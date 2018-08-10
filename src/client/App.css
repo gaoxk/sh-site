@@ -20,7 +20,7 @@ h1 {
 }
 
 h3 {
-  font-size: 1.25em;
+  font-size: 1.5em;
 }
 
 a {
@@ -29,7 +29,16 @@ a {
 }
 
 p, li {
-  font-size: 1em;
+  font-size: 1.1em;
+}
+
+p {
+  opacity: 0.75;
+}
+
+li {
+  font-family: 'Montserrat', sans-serif;
+  font-style:  medium;
 }
 
 button {
@@ -43,6 +52,14 @@ button {
 
 button:hover {
   background-color: white !important;
+}
+
+.form-control {
+  padding: 3.5%;
+}
+
+input::placeholder {
+ font-style: italic;
 }
 
 @media (max-width: 768px) {
@@ -77,8 +94,8 @@ button:hover {
   transition: visibility 0.25s, background-color 0.25s;
 }
 
-.hero-nav {
-  background-color: transparent;
+.nav-bod {
+  margin-top: 2%;
 }
 
 @media (max-width: 768px) {
@@ -99,18 +116,17 @@ button:hover {
 }
 
 #hero-sub {
-  font-size: 0.8em;
-  color: grey;
+  opacity: 0.51;
 }
 
 .hero h3 {
-  margin-top: 4%;
   margin-bottom: 4%
 }
 
 .hero img {
   position: absolute;
-  width: 50%;
+  max-height: 92%;
+  max-width: 50%;
   right: 0;
 }
 
@@ -123,21 +139,25 @@ button:hover {
   color: #3c56a5;
 }
 
+.hero input {
+  max-width: 90%;
+}
+
 .description {
   overflow: visible;
+  background-color: red;
 }
 
 .description img {
   position: absolute;
   left: 0;
   top: 0;
-  width: 100%;
-  max-height: 100vh;
+  max-width: 100%;
+  max-height: 85vh;
 }
 
 #learn img{
-  padding: 5%;
-  top: 15%;
+  margin: 19%;
 }
 
 @media (max-width: 769px) {
@@ -158,11 +178,17 @@ button:hover {
 }
 
 @media (min-width: 1025px) {
-  .hero-text, .description-text {
+  .hero-text {
     width: 50%;
   }
   .hero h1 {
     font-size: 4em;
+  }
+  .description-text {
+    max-width: 35%;
+  }
+  .description-text p {
+   margin-top: 4%;
   }
 }
 
@@ -178,9 +204,14 @@ button:hover {
 }
 
 /* How It Works */
+.how-it-works-content {
+  margin-top: 4%;
+}
+
 .how-it-works img {
   position: absolute;
-  width: 100%;
+  max-width: 100%;
+  max-height: 80vh;
   right: 0;
 }
 
@@ -201,12 +232,12 @@ button:hover {
   content: '';
   display: block;
   position: absolute;
-  top: -10px;
-  bottom: -10px;
-  left: -10px;
-  right: -10px;
+  top: -9px;
+  bottom: -9px;
+  left: -4px;
+  right: -4px;
   border-radius: 10px;
-  box-shadow: 0 0 5px 3px rgb(0, 0, 0, 0.1);
+  box-shadow: 0 0 8px 2px rgb(0, 0, 0, 0.1);
   background-color: white;
 }
 
@@ -218,11 +249,18 @@ button:hover {
   text-align: center;
 }
 
+.how-it-works p {
+  margin-top: 3%;
+  font-weight: bold;
+}
+
 .how-it-works-row {
-  margin-top: 7%;
+  margin-top: 4%;
   border: 1px solid #e0e0e0;
   border-radius: 10px;
   background-color: #e0e0e0;
+  padding-top: 5px;
+  padding-bottom: 5px;
 }
 
 @media (max-width: 426px) {
@@ -266,7 +304,7 @@ button:hover {
     transform: translateX(50%);
   }
   .how-it-works-row {
-    width: 45%;
+    width: 50%;
   }
 }
 
@@ -275,12 +313,17 @@ button:hover {
   text-align: center;
 }
 
-.stream h3, .stream p {
+.stream h1, .stream h3, .stream p {
   margin-top: 10%;
+}
+
+.stream p {
+  max-width: 80%;
 }
 
 .stream img {
   width: 100%;
+  margin: 5% auto;
 }
 
 @media (max-width: 768px) {
@@ -293,6 +336,10 @@ button:hover {
 .hacker-stories {
   overflow: visible;
   white-space: nowrap;
+}
+
+.hacker-stories-content {
+  margin: 10% auto;
 }
 
 .carousel-item {
@@ -357,6 +404,10 @@ button:hover {
   overflow: visible;
 }
 
+.faq h1 {
+  font-size: 2.5em;
+}
+
 .accordion {
   margin-top: 2%;
   cursor: pointer;
@@ -383,7 +434,7 @@ button:hover {
 .faq img {
   position: absolute;
   width: 30%;
-  margin-top: 5%;
+  margin-top: 10%;
   left: 0;
 }
 
@@ -407,9 +458,13 @@ button:hover {
 .sponsor {
   position: relative;
   display: block;
-  padding: 30px;
+  padding: 10%;
   text-align: center;
   margin-bottom: 30px;
+}
+
+.sponsor h3 {
+  opacity: 0.51;
 }
 
 /* Contact */

@@ -25,7 +25,7 @@ class Faq extends Component {
 					<div className='container hero'>
 						<div className='row'>
 							<div className='col-md-4'>
-								<h2>{ResourceStrings.faq_long}</h2>
+								<h1>{ResourceStrings.faq_long}</h1>
 							</div>
 							<div className='col-md-8'>
 								{qanda}
