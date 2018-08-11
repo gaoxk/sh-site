@@ -39,7 +39,7 @@ class ContactForm extends Component {
 	render() {
 		return(
 			<form>
-				<FormGroup controlId='formBasicText'>
+				<FormGroup className='contact-form' controlId='formBasicText'>
 					<div className='field'>
 						<ControlLabel><p>{ResourceStrings.contact_subject}</p></ControlLabel>
 						<FormControl

@@ -18,7 +18,7 @@ class HackerStories extends Component {
 		const mixer = shuffle([0, 1, 2, 3, 4]);
 		this.state = {
 			toggle: false,
-			trans: 107,
+			trans: 104,
 			transform: 'translateX(0)',
 			ltr: true,
 			rtl: false,
@@ -48,8 +48,8 @@ class HackerStories extends Component {
 
 	onClick (event) {
 		clearInterval(this.state.timer);
-		const cond1 = e => e.screenX < window.innerWidth*0.2;
-		const cond2 = e => e.screenX > window.innerWidth*0.6;
+		const cond1 = e => e.screenX < window.innerWidth*0.5;
+		const cond2 = e => e.screenX > window.innerWidth*0.5;
 		this.animate(cond1, cond2, event);
 	/*	this.setState({
 			timmer: setInterval(
@@ -72,7 +72,7 @@ class HackerStories extends Component {
 
 	onScroll (event) {
 		if(window.scrollY > window.innerHeight * 4.5 &&
-			window.scrollY < window.innerHeight * 5.25) {
+			window.scrollY < window.innerHeight * 5.5) {
 			this.setState({opacity: 1, toggle: true});
 		} else {
 			this.setState({opacity: 0.5, toggle: false});
@@ -88,11 +88,11 @@ class HackerStories extends Component {
 			  if (cond1(event) && newTrans > 0) {
 					newLTR = false;
 					newRTL = true;
-					newTrans-=107;
-				} else if (cond2(event) && newTrans < 107*4) {
+					newTrans-=104;
+				} else if (cond2(event) && newTrans < 104*4) {
 					newLTR = true;
 					newRTL = false;
-					newTrans+=107;
+					newTrans+=104;
 				}
 				return({
 					trans: newTrans,

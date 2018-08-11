@@ -38,7 +38,6 @@ p {
 
 li {
   font-family: 'Montserrat', sans-serif;
-  font-style:  medium;
 }
 
 button {
@@ -48,6 +47,7 @@ button {
   color: white;
   width: 33%;
   transition: background .25s;
+  box-shadow: 0 0 8px 2px rgb(0, 0, 0, 0.1);
 }
 
 button:hover {
@@ -125,8 +125,7 @@ input::placeholder {
 
 .hero img {
   position: absolute;
-  max-height: 92%;
-  max-width: 50%;
+  max-height: 80%;
   right: 0;
 }
 
@@ -199,6 +198,22 @@ input::placeholder {
   .hero img {
     height: 100%;
     width: auto;
+  }
+  #learn img{
+    margin-left: 10%;
+    margin-top: 20%;
+    max-width: 80%;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1025px) {
+  .hero-text {
+    margin-left: 4%;
+    margin-top: 20%;
+    max-width: 45%;
+  }
+  .hero img {
+    height: 70%;
   }
 }
 
@@ -343,7 +358,7 @@ input::placeholder {
 
 .carousel-item {
   margin-top: 2%;
-  padding: 1%;
+  margin-right: 3%;
   height: 60%;
   width: 70%;
   border-radius: 15px;
@@ -352,8 +367,8 @@ input::placeholder {
   background-color: transparent;
   display: inline-block;
   transition: transform 2s ease;
-  margin-right: 5%;
   white-space: nowrap;
+  overflow: hidden;
 }
 
 .carousel-item-img img{
@@ -361,14 +376,14 @@ input::placeholder {
   max-height: 100%;
   overflow: visible;
   float: left;
-  border-radius: 15px;
 }
 
 .carousel-item-text {
   max-width: 45%;
   float: right;
-  padding: 0%;
-  padding-right: 2%;
+  padding-left: 4%;
+  padding-right: 4%;
+  padding-bottom: 4%;
   white-space: normal;
 }
 
@@ -410,30 +425,26 @@ input::placeholder {
 .accordion {
   margin-top: 2%;
   cursor: pointer;
-  padding: 0.01%;
-  padding-left: 2%;
+  padding: 0.005%;
+  padding-left: 3%;
   width: 100%;
   border-radius: 7px;
-  box-shadow: 0px 0 6px 0 rgba(0, 0, 0, 0.1);
+  box-shadow: 0px 0 6px 0 rgba(0, 0, 0, 0.3);
   outline: none;
   background-color: transparent;
-}
-
-.accordion:hover {
-  box-shadow: 0 0 6px 0 rgba(0, 0, 0, 0.05);
-  transition-property: box-shadow 5s ease;
 }
 
 .answer {
   margin-top: 2%;
   padding: 0 5%;
   transition: display 1s;
+  color: rgba(0, 0, 0, 0.7)
 }
 
 .faq img {
   position: absolute;
   width: 30%;
-  margin-top: 10%;
+  margin-top: 12%;
   left: 0;
 }
 
@@ -449,7 +460,7 @@ input::placeholder {
 
 @media (max-width: 1025px) {
   .faq img {
-    margin-top: 15%;
+    margin-top: 20%;
   }
 }
 
@@ -473,12 +484,16 @@ input::placeholder {
   padding: 3%;
 }
 
-.contact label{
-  margin-top: 2%;
+.field {
+  margin-top: 5%;
 }
 
-.field {
-  margin-top: 2%;
+.control-label {
+  margin-bottom: 0;
+}
+
+.contact-form input {
+  padding: 4%;
 }
 
 .form-control {
@@ -492,7 +507,10 @@ input::placeholder {
 
 .newsletter {
   text-align: center;
-  padding: 10%;
+  width: 45%;
+  margin-top: 3.5%;
+  margin-left: 4%;
+  padding: 9%;
   border-radius: 7px;
   box-shadow: 0 0 8px 1px rgba(0, 0, 0, 0.15);
   background-color: white;
@@ -501,7 +519,7 @@ input::placeholder {
 .newsletter input {
   max-width: 80%;
   display: block;
-  margin : 0 auto;
+  margin : 2% auto;
 }
 
 .contact button {
@@ -532,6 +550,12 @@ input::placeholder {
   }
 }
 
+@media (max-width: 1025px) {
+  .newsletter {
+    margin-top: 2%;
+  }
+}
+
 /* Footer */
 .footer {
   background-color: #C4C4C4;
@@ -541,5 +565,12 @@ input::placeholder {
 
 .footer img{
   height: 5vh;
-  margin: 1%;
+  margin: 2%;
+}
+
+@media (min-width: 1025px) {
+  .footer img{
+    height: 5vh;
+    margin: 1%;
+  }
 }
