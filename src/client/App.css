@@ -167,11 +167,12 @@ input::placeholder {
     overflow: hidden;
   }
   .hero-text, .description-text {
-    margin-top: 5%;
+    margin-top: 10%;
+    max-width: 45%;
   }
   .hero img {
-    width: 80%;
-    transform: translateX(30%);
+    max-height: 50vh;
+    float: right;
   }
 }
 
@@ -191,10 +192,6 @@ input::placeholder {
 }
 
 @media (max-width: 1025px) {
-  .hero-text, .description-text {
-    margin-top: 20%;
-    max-width: 40%;
-  }
   .hero img {
     height: 100%;
     width: auto;
@@ -275,6 +272,7 @@ input::placeholder {
   background-color: #e0e0e0;
   padding-top: 5px;
   padding-bottom: 5px;
+  text-align: center;
 }
 
 @media (max-width: 426px) {
@@ -302,7 +300,7 @@ input::placeholder {
   .how-it-works img {
     position: absolute !important;
     transform: translateY(-100%);
-    width: 80%;
+    width: 75%;
   }
 }
 
@@ -344,6 +342,10 @@ input::placeholder {
   .stream h3, .stream p {
     margin-top: 0;
   }
+  .stream .col-md-4 {
+    margin: 5%;
+  }
+
 }
 
 /* Hacker Stories*/
@@ -458,7 +460,23 @@ input::placeholder {
   }
 }
 
-@media (max-width: 1025px) {
+@media (min-width: 768px) {
+  .faq {
+    height: auto;
+  }
+  .faq .col-md-8 {
+    margin: 1% auto;
+  }
+  .faq img {
+    height: 70vh;
+    width: auto;
+  }
+  .faq h1 {
+    margin: 5% auto;
+  }
+}
+
+@media (max-width: 1025px) and (min-width: 1440px){
   .faq img {
     margin-top: 20%;
   }
@@ -546,7 +564,13 @@ input::placeholder {
     visibility: hidden;
   }
   .contact {
-    height: 65vh;
+    height: auto;
+  }
+  .contact-form input {
+    padding: 2%;
+  }
+  .contact button {
+    width: 33%;
   }
 }
 
