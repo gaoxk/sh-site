@@ -6,7 +6,6 @@
     "body-parser": "^1.18.3",
     "eslint": "^5.1.0",
     "express": "^4.16.3",
-    "gh-pages": "^1.2.0",
     "lodash": "^4.17.10",
     "nodemailer": "^4.6.7",
     "react": "^16.4.1",
@@ -17,13 +16,11 @@
     "superagent": "^3.8.3"
   },
   "scripts": {
-    "start": "webpack-dev-server --mode development --devtool inline-source-map --hot",
     "client": "webpack-dev-server --mode development --devtool inline-source-map --hot",
     "server": "nodemon src/server/index.js",
-    "dev": "concurrently \"npm run server\" \"npm run client\"",
-    "build": "react-scripts build",
-    "test": "react-scripts test --env=jsdom",
-    "deploy": "gh-pages -d build"
+    "build": "webpack --mode production",
+    "deploy": "gh-pages -d proj/dist",
+    "publish-demo": "npm run build && npm run deploy"
   },
   "devDependencies": {
     "babel-core": "^6.26.3",
@@ -32,6 +29,7 @@
     "babel-preset-react": "^6.24.1",
     "css-loader": "^1.0.0",
     "file-loader": "^1.1.11",
+    "gh-pages": "^1.2.0",
     "html-loader": "^0.5.5",
     "html-webpack-plugin": "^3.2.0",
     "image-webpack-loader": "^4.3.1",
