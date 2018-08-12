@@ -244,6 +244,16 @@ input::placeholder {
 }
 
 @media (min-width: 1440px) {
+  .hero-text, .description-text {
+    width: 45%;
+  }
+  .hero input {
+    max-width: 70%;
+    padding: 2%;
+  }
+  .hero button {
+    max-width: 33%;
+  }
   .hero img {
     max-height: 90%;
   }
@@ -462,6 +472,12 @@ input::placeholder {
 @media (max-width: 768px) {
   .carousel-item-text {
     visibility: hidden;
+  }
+}
+
+@media (min-width: 1440px) {
+  .carousel-item-text {
+    padding-top: 2.5%;
   }
 }
 
