@@ -11,7 +11,10 @@ class NavComponent extends Component {
 		this.state = {
 			className: 'animated fadeInDown hero-nav',
 			visibility: 'visible',
-			lastscrollpos: 0
+			lastscrollpos: 0,
+			style: {
+				backgroundColor: 'transparent'
+			}
 		};
 		this.onScroll = this.onScroll.bind(this);
 		this.onMouseMove = this.onMouseMove.bind(this);
