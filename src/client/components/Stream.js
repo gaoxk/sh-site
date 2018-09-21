@@ -23,9 +23,9 @@ const Stream = () => (
 				</div>
 				<div className='col-md-4'>
 					<h3 style={{color: ResourceStrings.green}}>
-						{ResourceStrings.stream_bussiness}
+						{ResourceStrings.stream_business}
 					</h3>
-					<p>{ResourceStrings.stream_bussiness_desc}</p>
+					<p>{ResourceStrings.stream_business_desc}</p>
 				</div>
 			</div>
 		</div>
