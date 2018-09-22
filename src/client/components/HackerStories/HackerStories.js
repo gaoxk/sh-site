@@ -94,6 +94,8 @@ class HackerStories extends Component {
 					newRTL = false;
 					newTrans+=104;
 				}
+				let newWidth = ((newTrans/104) + 1) * 20;
+				document.getElementById('scrollBar').style.width = newWidth + '%';
 				return({
 					trans: newTrans,
 					transform: 'translateX(-'+ newTrans + '%)',
@@ -127,6 +129,9 @@ class HackerStories extends Component {
 					<div className='hacker-stories-content'>
 						<h1>{ResourceStrings.hacker_stories}</h1>
 						{display}
+						<div id='scrollView'>
+							<div id='scrollBar' style={this.state.scroll}></div>
+						</div>
 					</div>
 				</div>
 			</Element>

@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css?family=Montserrat');
+@import url('https://fonts.googleapis.com/css?family=Montserrat:400,700');
 
 @import url('https://fonts.googleapis.com/css?family=Lato');
 
@@ -20,8 +20,11 @@ body, html {
 }
 
 h1 {
-  font-family: 'Montserrat', sans-serif!important;
   font-weight: 700!important;
+}
+
+h1, h2, h3, h4 {
+  font-family: 'Montserrat', sans-serif!important;
 }
 
 h3 {
@@ -35,7 +38,7 @@ a {
 
 p, li {
   font-size: 1.1em;
-  font-family: 'Lato', sans-serif !important;
+  font-family: 'Lato', sans-serif!important;
 }
 
 p {
@@ -60,6 +63,11 @@ button:hover {
   background-color: white !important;
 }
 
+button h4 {
+  font-family: 'Lato', sans-serif!important;
+  font-size: 12pt;
+}
+
 .form-control {
   padding: 3.5%;
 }
@@ -76,6 +84,10 @@ input::placeholder {
     position: relative !important;
     margin-left: -15px;
     margin-right: -15px;
+  }
+
+  .question {
+    width: 80%;
   }
 }
 
@@ -100,6 +112,10 @@ input::placeholder {
   background-color: white;
   border: 0;
   transition: visibility 0.25s, background-color 0.25s;
+}
+
+.navbar p {
+  font-family: 'Montserrat', sans-serif!important;
 }
 
 .nav-bod {
@@ -237,7 +253,7 @@ input::placeholder {
     width: 40%;
   }
   .hero h1 {
-    font-size: 4em;
+    font-size: 3em;
   }
   .description-text {
     max-width: 35%;
@@ -274,6 +290,10 @@ input::placeholder {
 /* How It Works */
 .how-it-works-content {
   margin-top: 4%;
+}
+
+.how-it-works h4 {
+  font-size: 14px;
 }
 
 .how-it-works img {
@@ -381,7 +401,7 @@ input::placeholder {
 
 @media (min-width: 1025px) {
   .how-it-works-text {
-    transform: translateX(50%);
+    transform: translateX(30%);
   }
   .how-it-works-row {
     width: 50%;
@@ -420,6 +440,8 @@ input::placeholder {
 .hacker-stories {
   overflow: visible;
   white-space: nowrap;
+  margin-top: 5%;
+  margin-bottom: 5%;
 }
 
 .hacker-stories-content {
@@ -489,6 +511,21 @@ input::placeholder {
   }
 }
 
+#scrollView {
+  margin-top: 30px;
+  width: 70%;
+  box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.2);
+  background-color: #ccc;
+  border-radius: 20px;
+}
+#scrollBar {
+  width: 20%;
+  height: 15px;
+  background-color: #ec1b69;
+  border-radius: 20px;
+  transition: width 1s;
+}
+
 /* FAQ */
 .faq {
   overflow: visible;
@@ -497,6 +534,17 @@ input::placeholder {
 
 .faq h1 {
   font-size: 2.5em;
+}
+
+.question {
+  display:inline-block;
+}
+
+.questionArrow {
+  display:inline-block;
+  float:right;
+  color: gray;
+  margin-right: 3%;
 }
 
 .accordion {
@@ -606,7 +654,6 @@ input::placeholder {
 .newsletter {
   text-align: center;
   width: 45%;
-  margin-top: 3.5%;
   margin-left: 4%;
   padding: 9%;
   border-radius: 7px;
