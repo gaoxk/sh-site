@@ -24,7 +24,7 @@ class Faq extends Component {
 			<Element name='faq'>
 				<div className='faq container-fluid' id='faq'>
 					<img src={faq_img} alt='frequently asked questions'/>
-					<div className='container hero'>
+					<div className='faq faq-content-container container hero'>
 						<div className='row'>
 							<div className='col-md-4'>
 								<h1>{ResourceStrings.faq_long}</h1>

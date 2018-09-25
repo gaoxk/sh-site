@@ -66,7 +66,7 @@ const ResourceStrings = {
 	],
 	questions: [
 		'Is there a Code of Conduct?',
-		'When and where is StarterHacks happening?',
+		'When and where is StarterHacks?',
 		'Can I attend if I live far away?',
 		'What can I hack on?',
 		'Who can apply?',
