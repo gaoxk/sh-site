@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { Element } from 'react-scroll';
-
+import {PanelGroup, Panel} from 'react-bootstrap';
 import ResourceStrings from './../../ResourceStrings';
 import Question from './Question';
 import faq_img from './../../assets/FAQ.png';
@@ -11,11 +11,13 @@ class Faq extends Component {
 		const len = ResourceStrings.questions.length;
 		for(let i = 0; i<len; i++) {
 			qanda.push(
-				<Question
-					question={ResourceStrings.questions[i]}
-					answer={ResourceStrings.answers[i]}
-					key={i}
-				/>
+				<Panel eventKey={String(i+1)}>
+					<Question
+						question={ResourceStrings.questions[i]}
+						answer={ResourceStrings.answers[i]}
+						key={i}
+					/>
+				</Panel>
 			);
 		}
 		return (
@@ -27,9 +29,13 @@ class Faq extends Component {
 							<div className='col-md-4'>
 								<h1>{ResourceStrings.faq_long}</h1>
 							</div>
+							
 							<div className='col-md-8'>
+							<PanelGroup accordion id="faq-body">
 								{qanda}
+								</PanelGroup>
 							</div>
+							
 						</div>
 					</div>
 				</div>

@@ -259,6 +259,10 @@ input::placeholder {
 }
 
 @media (min-width: 1024px) and (max-width: 1440px) {
+  .hero img {
+    width:60%;
+    height:auto;
+  }
   .hero-text, .description-text {
     margin-top: 18%;
   }
@@ -560,13 +564,28 @@ input::placeholder {
   font-size: 2.5em;
 }
 
+.questionContainer {
+  display:flex;
+  flex-direction:row;
+  align-items: center;
+  justify-content: center;
+  height:65px;
+}
+
 .question {
-  display:inline-block;
+  display:flex;
+}
+/* enables toggle on title click */
+.question a {
+  width:100%;
+  /* Default sizing for H3 - need the override bcuz of react-bootstrap package */
+  font-size:1.75rem !important;
+  font-weight:500 !important;
 }
 
 .questionArrow {
-  display:inline-block;
-  float:right;
+  display:flex;
+  margin-left:auto;
   color: gray;
   margin-right: 3%;
 }
@@ -585,7 +604,7 @@ input::placeholder {
 
 .answer {
   margin-top: 2%;
-  padding: 0 5%;
+  padding: 25px 5%;
   transition: display 1s;
   color: rgba(0, 0, 0, 0.7)
 }
@@ -609,7 +628,7 @@ input::placeholder {
 
 @media (min-width: 768px) and (max-width: 1024px) {
   .faq.container-fluid {
-    min-height: 100vh;
+    min-height: 80vh;
   }
   .faq img {
     visibility: hidden;
