@@ -13,7 +13,7 @@ class NavComponent extends Component {
 			visibility: 'visible',
 			lastscrollpos: 0,
 			style: {
-				backgroundColor: window.innerHeight > 512 ? 'white' : 'transparent'
+				backgroundColor: window.innerHeight >= 768 ? 'white' : 'transparent'
 			}
 		};
 		this.onScroll = this.onScroll.bind(this);
@@ -63,7 +63,7 @@ class NavComponent extends Component {
 			});
 		}
 		if (scrollPos < window.innerHeight * 0.33){
-			if (window.innerWidth < 512) {
+			if (window.innerWidth <= 768) {
 				this.setState({
 					style: {
 						backgroundColor: 'white'

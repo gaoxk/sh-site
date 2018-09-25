@@ -248,6 +248,9 @@ input::placeholder {
     height: 100%;
     width: auto;
   }
+  .description {
+    margin-bottom:0;
+  }
   #learn img{
     margin-left: 10%;
     margin-top: 20%;
@@ -384,10 +387,10 @@ input::placeholder {
 
 @media (min-width: 426px) and (max-width: 768px) {
   .how-it-works {
+    height:70vh;
     max-height: 300vh;
     display: flex;
     flex-direction: column-reverse;
-    margin-top:-50vh;
   }
   .how-it-works-text {
     margin-top: 0;
@@ -400,6 +403,14 @@ input::placeholder {
     position: absolute !important;
     transform: translateY(-100%);
     width: 75%;
+  }
+}
+
+@media (min-width: 768) and (max-width:1024) {
+  .how-it-works {
+    height:60vh;
+    display: flex;
+    flex-direction: column-reverse;
   }
 }
 
@@ -444,7 +455,9 @@ input::placeholder {
   .stream .col-md-4 {
     margin: 5%;
   }
-
+  .stream {
+    height:auto;
+  }
 }
 
 /* Hacker Stories*/
