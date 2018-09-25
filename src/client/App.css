@@ -14,13 +14,18 @@ body, html {
   max-width: 100%;
   overflow-x: hidden;
   background-color: transparent;
-  color: black;
+  color: #333;
   font-family: 'Lato', sans-serif;
   transition: background .5s ease, visibility .5s ease;
 }
 
 img {
   z-index: -1 !important;
+}
+
+h1, h2, h3, h4, h5, h6, p, li, a {
+  font-family: 'Montserrat', sans-serif;
+  line-height:1.5;
 }
 
 h1 {
@@ -46,7 +51,7 @@ p, li {
 }
 
 p {
-  opacity: 0.75;
+  color: #333;
 }
 
 li {
