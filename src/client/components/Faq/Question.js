@@ -5,26 +5,49 @@ class Question extends Component {
 	constructor(props) {
 		super(props);
 		this.state = {
-			display: 'none'
+			arrow: {
+				transform: 'rotate(-90deg)'
+			},
+			answer: {
+				display: 'none'
+			}
 		};
 		this.clicker = this.clicker.bind(this);
 	}
 	clicker () {
-		this.state.display === 'none' ?
+
+
+		this.state.answer.display === 'none' ?
+			
 			this.setState({
-				display: 'block'
+				arrow: {
+					transform: 'rotate(0deg)'
+				},
+				answer: {
+					display: 'block'
+				}
 			}) :
 			this.setState({
-				display: 'none'
+				arrow: {
+					transform: 'rotate(-90deg)'
+				},
+				answer: {
+					display: 'none'
+				}
 			});
+			
+
+
+
 	}
 	render() {
 		return (
 			<div>
 				<div className="accordion" onClick={this.clicker}>
-					<h3>{this.props.question}</h3>
+					<h3 className="question">{this.props.question}</h3>
+					<h3 className="questionArrow"><i class="fas fa-angle-left" style={this.state.arrow}></i></h3>
 				</div>
-				<div className="answer animated fadeIn" style={this.state}>
+				<div className="answer animated fadeIn" style={this.state.answer}>
 					<p>{this.props.answer}</p>
 				</div>
 			</div>

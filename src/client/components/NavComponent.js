@@ -98,7 +98,7 @@ class NavComponent extends Component {
 			<Navbar fixedTop {... this.state}>
 				<div className='nav-bod'>
 					<Navbar.Header>
-						<Link smooth={true} to='hero' className="nav-link">
+						<Link smooth={true} to='hero' href="/index.html" className="nav-link">
 							<Navbar.Brand>
 	          	<img src={logo} alt='starterhacks logo'/>
 							</Navbar.Brand>
