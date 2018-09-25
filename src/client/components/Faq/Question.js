@@ -45,7 +45,7 @@ class Question extends Component {
 			<div>
 				<div className="accordion" onClick={this.clicker}>
 					<h3 className="question">{this.props.question}</h3>
-					<h3 className="questionArrow"><i class="fas fa-angle-left" style={this.state.arrow}></i></h3>
+					<h3 className="questionArrow"><i className="fas fa-angle-left" style={this.state.arrow}></i></h3>
 				</div>
 				<div className="answer animated fadeIn" style={this.state.answer}>
 					<p>{this.props.answer}</p>

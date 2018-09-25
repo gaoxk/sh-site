@@ -95,7 +95,8 @@ class HackerStories extends Component {
 					newTrans+=104;
 				}
 				let newWidth = ((newTrans/104) + 1) * 20;
-				document.getElementById('scrollBar').style.width = newWidth + '%';
+				if(document.getElementById('scrollBar'))
+					document.getElementById('scrollBar').style.width = newWidth + '%';
 				return({
 					trans: newTrans,
 					transform: 'translateX(-'+ newTrans + '%)',
