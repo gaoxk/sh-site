@@ -13,7 +13,7 @@ class NavComponent extends Component {
 			visibility: 'visible',
 			lastscrollpos: 0,
 			style: {
-				backgroundColor: 'transparent'
+				backgroundColor: window.innerHeight > 512 ? 'white' : 'transparent'
 			}
 		};
 		this.onScroll = this.onScroll.bind(this);
@@ -63,11 +63,20 @@ class NavComponent extends Component {
 			});
 		}
 		if (scrollPos < window.innerHeight * 0.33){
-			this.setState({
-				style: {
-					backgroundColor: 'transparent'
-				}
-			});
+			if (window.innerWidth < 512) {
+				this.setState({
+					style: {
+						backgroundColor: 'white'
+					}
+				});
+			}
+			else {
+				this.setState({
+					style: {
+						backgroundColor: 'transparent'
+					}
+				});
+			}
 		} else {
 			this.setState({
 				style: {
@@ -97,18 +106,21 @@ class NavComponent extends Component {
 		return (
 			<Navbar fixedTop {... this.state}>
 				<div className='nav-bod'>
+					<Navbar.Toggle />
 					<Navbar.Header>
 						<Link smooth={true} to='hero' href="/index.html" className="nav-link">
 							<Navbar.Brand>
-	          	<img src={logo} alt='starterhacks logo'/>
+								<img src={logo} alt='starterhacks logo'/>
 							</Navbar.Brand>
 						</Link>
-      	</Navbar.Header>
-      	<Nav pullRight>
-						{navs}
-    		</Nav>
+					</Navbar.Header>
+					<Navbar.Collapse>
+						<Nav pullRight>
+							{navs}
+						</Nav>
+					</Navbar.Collapse>
 				</div>
-	  	</Navbar>
+			</Navbar>
 		);
 	}
 }

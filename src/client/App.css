@@ -131,12 +131,6 @@ input::placeholder {
   margin-top: 2%;
 }
 
-@media (max-width: 768px) {
-  .navbar {
-    visibility: hidden;
-  }
-}
-
 /* Hero and Description*/
 .hero, .description, .stream, .hacker-stories, .how-it-works, .contact {
   height: 100vh;
