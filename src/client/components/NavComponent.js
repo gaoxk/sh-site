@@ -13,7 +13,7 @@ class NavComponent extends Component {
 			visibility: 'visible',
 			lastscrollpos: 0,
 			style: {
-				backgroundColor: window.innerHeight >= 768 ? 'white' : 'transparent'
+				backgroundColor: window.innerWidth <= 768 ? 'white' : 'transparent'
 			}
 		};
 		this.onScroll = this.onScroll.bind(this);
