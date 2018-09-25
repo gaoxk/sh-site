@@ -13,10 +13,14 @@ body, html {
   min-height: 100%;
   max-width: 100%;
   overflow-x: hidden;
-  background-color: white;
+  background-color: transparent;
   color: black;
   font-family: 'Lato', sans-serif;
   transition: background .5s ease, visibility .5s ease;
+}
+
+img {
+  z-index: -1 !important;
 }
 
 h1 {
