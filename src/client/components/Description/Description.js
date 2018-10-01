@@ -6,7 +6,7 @@ const Description = props => (
 	<Element name={'description-' + props.id}>
 		<div className='description row container-fluid' id={props.id}>
 			<div className='col-sm-6'>
-				<img id={props.id} src={props.imger} alt='about StarterHacks'/>
+				<img id={props.id+'img'} src={props.imger} alt='about StarterHacks'/>
 			</div>
 			<div className='col-sm-6'>
 				<div className='container'>

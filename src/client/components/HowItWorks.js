@@ -73,6 +73,11 @@ class HowItWorks extends Component {
       					<h4>{ResourceStrings.how_present}</h4>
       				</div>
 							</div>
+							<div style={{marginLeft:-15}}>
+							<p className={'col-sm-6'} style={{display: this.state.visible[0] === 'here' ? 'block' : 'none'}}>{ResourceStrings.how_plan_desc}</p>
+							<p className={'col-sm-6'} style={{display: this.state.visible[1] === 'here' ? 'block' : 'none'}}>{ResourceStrings.how_proto_desc}</p>
+							<p className={'col-sm-6'} style={{display: this.state.visible[2] === 'here' ? 'block' : 'none'}}>{ResourceStrings.how_present_desc}</p>
+							</div>
 						</div>
 					</div>
 				</div>

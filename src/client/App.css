@@ -140,7 +140,7 @@ input::placeholder {
 /* Hero and Description*/
 .hero, .description, .stream, .hacker-stories, .how-it-works, .contact {
   height: 100vh;
-  position: relative;
+  /* position: relative; */
   text-align: left;
 }
 
@@ -210,6 +210,9 @@ input::placeholder {
   }
   .description-text {
    margin: 10% auto;
+  }
+  #about {
+    margin-bottom:350px;
   }
 }
 

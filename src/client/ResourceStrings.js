@@ -50,8 +50,11 @@ const ResourceStrings = {
 	how_it_works: 'How it works',
 	how_in_24: 'In 24 hours:',
 	how_plan: 'Plan',
+	how_plan_desc:'Find an awesome team with all the required skills - development, design, business. Talk to our community partners and mentors to come up with an impactful project. Scope your idea with the help of our mentors so you can be sure to complete it by Sunday.',
 	how_proto: 'Prototype',
+	how_proto_desc:"Attend workshops to learn core skills that will help you build a great MVP (minimum viable product). If you're stuck on a problem reach out to one of our 250 mentors for help!",
 	how_present: 'Present',
+	how_present_desc:"Pitch your project and the market you will reach in a science fair style setting to your peers and tech's biggest leaders. Try your hand at winning one of our great prizes.",
 	faq: 'faq',
 	faq_long: 'Frequently Asked Questions',
 	answers: [
