@@ -131,6 +131,11 @@ input::placeholder {
 
 .navbar p {
   font-family: 'Montserrat', sans-serif!important;
+  color: white;
+}
+
+.navbar.floatingNav p {
+  color: black;
 }
 
 .nav-bod {

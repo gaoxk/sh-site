@@ -81,7 +81,8 @@ class NavComponent extends Component {
 			this.setState({
 				style: {
 					backgroundColor: 'white'
-				}
+				},
+				className: 'floatingNav'
 			});
 		}
 		this.setState({lastscrollpos: scrollPos});
