@@ -24,6 +24,7 @@ Webpack
 - Under FAQ, include "Can't see your quetsion?"
 - put nav items in the correct order (FAQ before sponsors)
 - change footer icons
+- update sponsor text
 
 Styling
 - hacker stories need more margin
