@@ -22,12 +22,15 @@ Webpack
 - fix javascript bug in hacker stories carousel where it skips 2 people on initial interaction
 - Comply to FAQ styles
 - Under FAQ, include "Can't see your quetsion?"
-- put nav items in the correct order (FAQ before sponsors)
-- change footer icons
-- update sponsor text
+- react bootstrap fix (lol kristy is dumb asf)
 
 Styling
 - hacker stories need more margin
+
+## IN PROGRESS: KRISTY
+- change footer icons
+- update sponsor text
+- put nav items in the correct order (FAQ before sponsors)
 
 ## IN PROGRESS: AHRAR
 - need to put in 2018 successes
